@@ -1,0 +1,15 @@
+<mat-toolbar>
+    <span>DM</span>
+    <span class="filler"></span>
+    <button mat-button [matMenuTriggerFor]="menu">
+        {{ authService.authData()?.name }}
+    </button>
+
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="authService.signOut()">Sign Out</button>
+    </mat-menu>
+</mat-toolbar>
+
+<main>
+    <router-outlet/>
+</main>

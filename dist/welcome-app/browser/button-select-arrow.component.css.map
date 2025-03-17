@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/button-select-arrow/button-select-arrow.component.scss"],
+  "sourcesContent": ["svg {\n    margin-block: -7px;\n    margin-right: -7px;\n    fill: var(--mdc-text-button-label-text-color, var(--mat-sys-primary));\n}\n"],
+  "mappings": ";AAAA;AACI,gBAAA;AACA,gBAAA;AACA,QAAA,IAAA,kCAAA,EAAA,IAAA;;",
+  "names": []
+}

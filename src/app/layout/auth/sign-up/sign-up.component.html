@@ -1,0 +1,41 @@
+<div class="heading">
+    <h3 class="title">Sign Up</h3>
+</div>
+
+<div class="content">
+    <form class="form" [formGroup]="signUpForm" (ngSubmit)="signUp()">
+
+        <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input matInput formControlName="email">
+            @if (email.hasError('required')) {
+                <mat-error>Email is <strong>required</strong></mat-error>
+            }
+            @if (email.hasError('email')) {
+                <mat-error>Email is not valid</mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" type="password">
+            @if (password.hasError('required')) {
+                <mat-error>Password is <strong>required</strong></mat-error>
+            }
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Username</mat-label>
+            <input matInput formControlName="username">
+            @if (username.hasError('required')) {
+                <mat-error>Username is <strong>required</strong></mat-error>
+            }
+        </mat-form-field>
+
+    </form>
+</div>
+
+<div class="actions">
+    <a mat-button routerLink="../sign-in">Sign in</a>
+    <button mat-flat-button (click)="signUp()" [disabled]="isInvalidState()">Sign up</button>
+</div>

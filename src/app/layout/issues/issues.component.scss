@@ -1,0 +1,95 @@
+@use '@angular/material' as mat;
+
+:host {
+    display: grid;
+    height: 100%;
+    grid-template-rows: min-content 1fr;
+    grid-row-gap: 16px;
+    overflow: hidden;
+
+    @include mat.list-overrides((
+        list-item-leading-avatar-shape: var(--mat-sys-corner-small),
+    ));
+}
+
+.toolbar {
+    @include mat.form-field-overrides((
+        outlined-container-shape: var(--mat-sys-corner-extra-large),
+        outlined-outline-width: 0,
+        outlined-focus-outline-width: 0,
+        container-vertical-padding: 8px,
+        container-height: 40px
+    ));
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    grid-column-gap: 16px;
+    align-items: center;
+}
+
+.search {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+
+    border-radius: var(--mat-sys-corner-extra-large);
+    background-color: var(--mat-sys-surface-container-high);
+
+    &:hover {
+        --_state-layer-opacity: var(--mat-sys-hover-state-layer-opacity);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: currentColor;
+        border-radius: inherit;
+        transition: opacity 150ms linear;
+
+        opacity: var(--_state-layer-opacity, 0);
+    }
+
+    &__prefix {
+        margin-left: 4px;
+    }
+
+    &__suffix {
+        margin-right: 8px;
+    }
+}
+
+.container {
+    display: grid;
+    height: 100%;
+    grid-auto-rows: min-content;
+    overflow: hidden;
+
+    border-radius: var(--mat-sys-corner-large);
+    background-color: var(--mat-sys-surface-container);
+}
+
+.heading {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: column;
+    grid-column-gap: 4px;
+
+    padding: 8px 16px;
+
+    background-color: var(--mat-sys-surface-container-high);
+}
+
+.content {
+    position: relative;
+    padding-block: 8px;
+}
+
+.progress {
+    position: absolute;
+    inset-inline: 0;
+    top: 0;
+}

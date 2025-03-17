@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/projects-selection/projects-selection.component.scss"],
+  "sourcesContent": [".project {\n    display: grid;\n    grid-template-columns: max-content 1fr;\n    align-items: center;\n    grid-column-gap: 12px;\n\n    &__code {\n        white-space: nowrap;\n        position: relative;\n        box-sizing: border-box;\n        place-self: center;\n        overflow: hidden;\n\n        width: 40px;\n        height: 40px;\n        padding: 4px;\n\n        border-radius: var(--mat-sys-corner-small);\n        background-color: var(--mat-sys-primary-container);\n        color: var(--mat-sys-on-primary-container);\n\n        &::after {\n            content: '';\n            position: absolute;\n            inset-inline: 0;\n            bottom: 0;\n            height: 4px;\n            background-color: var(--mat-sys-primary);\n        }\n    }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACI,WAAA;AACA,yBAAA,YAAA;AACA,eAAA;AACA,mBAAA;;AAEA,CAAA;AACI,eAAA;AACA,YAAA;AACA,cAAA;AACA,cAAA;AACA,YAAA;AAEA,SAAA;AACA,UAAA;AACA,WAAA;AAEA,iBAAA,IAAA;AACA,oBAAA,IAAA;AACA,SAAA,IAAA;;AAEA,CAfJ,aAeI;AACI,WAAA;AACA,YAAA;AACA,gBAAA;AACA,UAAA;AACA,UAAA;AACA,oBAAA,IAAA;;",
+  "names": []
+}

@@ -1,0 +1,25 @@
+<div class="cta-container">
+    <a mat-button routerLink="new">Create Project</a>
+
+    <form [formGroup]="filterForm">
+
+        <mat-form-field>
+            <mat-label>Search</mat-label>
+            <input matInput formControlName="searchTerm">
+        </mat-form-field>
+
+    </form>
+
+</div>
+
+<div class="projects-container">
+    <mat-nav-list>
+        @for (project of dataSource.data(); track project.id) {
+            <a mat-list-item routerLink="{{ project.id }}" routerLinkActive="active">{{ project.name }}</a>
+        }
+    </mat-nav-list>
+</div>
+
+<div class="issues-container">
+    <router-outlet/>
+</div>

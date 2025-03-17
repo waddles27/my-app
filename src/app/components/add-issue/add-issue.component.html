@@ -1,0 +1,18 @@
+<form [formGroup]="createForm" (ngSubmit)="onCreate()">
+
+    <mat-form-field>
+        <mat-label>Name</mat-label>
+        <input matInput formControlName="name">
+        @if (name.hasError('required')) {
+            <mat-error>Name is <strong>required</strong></mat-error>
+        }
+    </mat-form-field>
+
+    <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description">
+    </mat-form-field>
+
+</form>
+
+<button mat-button (click)="onCreate()" [disabled]="isInvalidState()">Create</button>

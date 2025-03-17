@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/components/priority-selection/priorities-selection.component.scss"],
+  "sourcesContent": [".priority {\n    display: grid;\n    grid-template-columns: max-content 1fr;\n    align-items: center;\n    grid-column-gap: 12px;\n\n    &__code {\n        display: grid;\n        place-items: center;\n        place-self: center;\n\n        width: 32px;\n        height: 32px;\n        border-radius: 4px;\n\n        background-color: var(--app-issue-marker-background-color);\n        color: var(--app-issue-marker-color);\n\n        &::after {\n            content: var(--app-issue-marker-letter);\n        }\n    }\n}\n"],
+  "mappings": ";AAAA,CAAA;AACI,WAAA;AACA,yBAAA,YAAA;AACA,eAAA;AACA,mBAAA;;AAEA,CAAA;AACI,WAAA;AACA,eAAA;AACA,cAAA;AAEA,SAAA;AACA,UAAA;AACA,iBAAA;AAEA,oBAAA,IAAA;AACA,SAAA,IAAA;;AAEA,CAZJ,cAYI;AACI,WAAA,IAAA;;",
+  "names": []
+}

@@ -1,0 +1,14 @@
+﻿@mixin component() {
+  .issue-list {
+    display: grid;
+
+    grid: {
+      row-gap: 8px;
+    }
+
+    padding: 24px;
+
+    border-radius: var(--mat-sys-corner-large);
+    background-color: var(--mat-sys-surface-container);
+  }
+}

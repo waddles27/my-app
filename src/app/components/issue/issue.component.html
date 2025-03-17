@@ -1,0 +1,4 @@
+<div class="app-issue__project-code">{{ issue().projectCode }}</div>
+<div class="app-issue__name">{{ issue().name }}</div>
+<div class="app-issue__created-on">{{'Created ' + (issue().createdOn | relativeTime) }}</div>
+<div class="app-issue__priority" [matTooltip]="issue().priority"></div>

@@ -1,0 +1,91 @@
+﻿:host {
+    display: grid;
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    cursor: pointer;
+
+    grid: {
+        template: {
+            columns: min-content 1fr min-content;
+            rows: min-content min-content;
+            areas: "project-code name priority" "project-code created-on priority";
+        }
+        column-gap: 16px;
+    }
+
+    padding: 8px 16px;
+
+    color: var(--mat-sys-on-surface);
+
+    &:hover {
+        --_state-layer-opacity: var(--mat-sys-hover-state-layer-opacity);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        z-index: -1;
+        background-color: currentColor;
+
+        opacity: var(--_state-layer-opacity, 0);
+    }
+
+    .app-issue__project-code {
+        grid-area: project-code;
+        white-space: nowrap;
+        position: relative;
+        box-sizing: border-box;
+        place-self: center;
+        overflow: hidden;
+
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+
+        border-radius: var(--mat-sys-corner-small);
+        background-color: var(--mat-sys-primary-container);
+        color: var(--mat-sys-on-primary-container);
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset-inline: 0;
+            bottom: 0;
+            height: 4px;
+            background-color: var(--mat-sys-primary);
+        }
+    }
+
+    .app-issue__name {
+        grid-area: name;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .app-issue__created-on {
+        grid-area: created-on;
+
+        color: var(--mat-sys-on-surface-variant);
+    }
+
+    .app-issue__priority {
+        grid-area: priority;
+        display: grid;
+        place-items: center;
+        place-self: center;
+
+        width: 32px;
+        height: 32px;
+        border-radius: 4px;
+
+        background-color: var(--app-issue-marker-background-color);
+        color: var(--app-issue-marker-color);
+
+        &::after {
+            content: var(--app-issue-marker-letter);
+        }
+    }
+}

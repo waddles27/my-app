@@ -1,0 +1,16 @@
+<button mat-button [matMenuTriggerFor]="menu">
+    Projects
+    <app-button-select-arrow></app-button-select-arrow>
+</button>
+
+<mat-menu #menu="matMenu">
+    @for (project of dataSource.data(); track project.id) {
+        <button mat-menu-item (click)="$event.stopPropagation(); onItemClick(project.id)">
+            <mat-icon>{{ isSelected(project.id) ? 'check' : '' }}</mat-icon>
+            <div class="project">
+                <div class="project__code">{{ project.code }}</div>
+                <div class="project__name">{{ project.name }}</div>
+            </div>
+        </button>
+    }
+</mat-menu>

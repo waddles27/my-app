@@ -1,0 +1,60 @@
+﻿@mixin _private-apply-font($type-scale) {
+    font-size: var(--mat-sys-#{$type-scale}-size);
+    font-weight: var(--mat-sys-#{$type-scale}-weight);
+    letter-spacing: var(--mat-sys-#{$type-scale}-tracking);
+    line-height: var(--mat-sys-#{$type-scale}-line-height);
+}
+
+@mixin _set-token($prefix, $component, $token, $value) {
+    & {
+        --#{$prefix}-#{$component}-#{$token}: #{$value};
+    }
+}
+
+@mixin component($component-prefix) {
+    $component-name: 'issue';
+    $marker-variants: (
+        "minor": (
+            "letter": '"M"',
+            "background-color": var(--mat-sys-surface-variant),
+            "color": var(--mat-sys-on-surface-variant),
+        ),
+        "normal": (
+            "letter": '"N"',
+            "background-color": var(--mat-sys-secondary-container),
+            "color": var(--mat-sys-on-secondary-container),
+        ),
+        "major": (
+            "letter": '"M"',
+            "background-color": var(--mat-sys-tertiary-container),
+            "color": var(--mat-sys-on-tertiary-container),
+        ),
+        "critical": (
+            "letter": '"C"',
+            "background-color": var(--mat-sys-error-container),
+            "color": var(--mat-sys-on-error-container),
+        )
+    );
+
+    .#{$component-prefix}-#{$component-name} {
+        @each $variant, $color-map in $marker-variants {
+            &--#{$variant} {
+                @each $property, $color in $color-map {
+                    @include _set-token($component-prefix, $component-name, 'marker-#{$property}', $color);
+                }
+            }
+        }
+
+        &__project-code {
+            @include _private-apply-font(title-small);
+        }
+
+        &__name {
+            @include _private-apply-font(body-large);
+        }
+
+        &__created-on {
+            @include _private-apply-font(body-medium);
+        }
+    }
+}

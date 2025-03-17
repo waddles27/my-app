@@ -1,0 +1,3 @@
+﻿docker buildx build -f Dockerfile -t dardar27/cm25-client:0.1.0 -t dardar27/cm25-client:latest --build-context client="../../" --build-context nginx-templates="./nginx/templates" .
+
+docker push dardar27/cm25-client -a

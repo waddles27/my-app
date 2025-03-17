@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/layout/auth/auth.component.scss"],
+  "sourcesContent": ["@mixin _private-apply-font($type-scale) {\n    font-size: var(--mat-sys-#{$type-scale}-size);\n    font-weight: var(--mat-sys-#{$type-scale}-weight);\n    letter-spacing: var(--mat-sys-#{$type-scale}-tracking);\n    line-height: var(--mat-sys-#{$type-scale}-line-height);\n}\n\n:host {\n    grid-template-rows: min-content 1fr;\n    grid-template-columns: 1fr;\n    grid-template-areas:\n        \"brand\"\n        \"content\";\n\n    .brand {\n        @include _private-apply-font(display-medium);\n\n        grid-area: brand;\n        display: grid;\n        place-items: center;\n        margin: 30px;\n\n        color: var(--mat-sys-primary);\n    }\n\n    main {\n        grid-area: content;\n        place-self: center;\n    }\n}\n"],
+  "mappings": ";AAOA;AACI,sBAAA,YAAA;AACA,yBAAA;AACA,uBACI,QAAA;;AAGJ,MAAA,CAAA;AAbA,aAAA,IAAA;AACA,eAAA,IAAA;AACA,kBAAA,IAAA;AACA,eAAA,IAAA;AAaI,aAAA;AACA,WAAA;AACA,eAAA;AACA,UAAA;AAEA,SAAA,IAAA;;AAGJ,MAAA;AACI,aAAA;AACA,cAAA;;",
+  "names": []
+}

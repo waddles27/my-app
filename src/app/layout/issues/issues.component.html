@@ -1,0 +1,43 @@
+<div class="toolbar">
+    <mat-form-field subscriptSizing="dynamic" class="search">
+        <mat-icon matIconPrefix class="search__prefix">search</mat-icon>
+        <input matInput placeholder="Search" [formControl]="searchControl">
+        @if (searchControl.value) {
+            <button matSuffix mat-icon-button class="search__suffix" (click)="searchControl.setValue('')">
+                <mat-icon>close</mat-icon>
+            </button>
+        }
+    </mat-form-field>
+    <a mat-button routerLink="../sign-up">Projects</a>
+    <button mat-flat-button (click)="createIssue()">New issue</button>
+</div>
+
+<div class="container">
+
+    <div class="heading">
+        <mat-chip-listbox [value]="selectedState()" (change)="onStateChanged($event)">
+            <mat-chip-option value="Open">Open</mat-chip-option>
+            <mat-chip-option value="Closed">Closed</mat-chip-option>
+        </mat-chip-listbox>
+
+        <app-projects-selection (change)="selectedProjectIds.set($event)"></app-projects-selection>
+        <app-priorities-selection (change)="selectedPriorities.set($event)"></app-priorities-selection>
+        <app-issue-sorting [sort]="dataSource.sortRequest()"
+                           (change)="dataSource.changeSort($event)"></app-issue-sorting>
+    </div>
+
+    <div class="content">
+        @if (!dataSource.isLoading()) {
+            <mat-action-list>
+                @for (issue of dataSource.data(); track issue.id) {
+                    <app-issue [issue]="issue"></app-issue>
+                }
+            </mat-action-list>
+        } @else {
+            <mat-progress-bar mode="indeterminate" class="progress"></mat-progress-bar>
+        }
+    </div>
+
+</div>
+
+

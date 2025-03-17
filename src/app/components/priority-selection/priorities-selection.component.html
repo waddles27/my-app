@@ -1,0 +1,16 @@
+<button mat-button [matMenuTriggerFor]="menu">
+    Priorities
+    <app-button-select-arrow></app-button-select-arrow>
+</button>
+
+<mat-menu #menu="matMenu">
+    @for (priority of selectablePriorities; track priority) {
+        <button mat-menu-item (click)="$event.stopPropagation(); onItemClick(priority)">
+            <mat-icon>{{ isSelected(priority) ? 'check' : '' }}</mat-icon>
+            <div class="app-issue priority" [ngClass]="priorityClass(priority)">
+                <div class="app-issue__priority priority__code"></div>
+                <div class="priority__name">{{ priority }}</div>
+            </div>
+        </button>
+    }
+</mat-menu>

@@ -1,0 +1,23 @@
+<button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>{{ sortDir() === 'asc' ? 'arrow_upward' : 'arrow_downward' }}</mat-icon>
+    {{ sort().sortBy | issueSortBy }}
+    <app-button-select-arrow></app-button-select-arrow>
+</button>
+
+<mat-menu #menu="matMenu">
+    @for (variant of sortVariants; track variant) {
+        <button mat-menu-item (click)="sortBy.set(variant)">
+            <mat-icon>{{ sortBy() === variant ? 'check' : '' }}</mat-icon>
+            {{ variant | issueSortBy }}
+        </button>
+    }
+    <mat-divider></mat-divider>
+    <button mat-menu-item (click)="sortDir.set('asc')">
+        <mat-icon>{{ sortDir() === 'asc' ? 'check' : '' }}</mat-icon>
+        {{ ascLabel() }}
+    </button>
+    <button mat-menu-item (click)="sortDir.set('desc')">
+        <mat-icon>{{ sortDir() === 'desc' ? 'check' : '' }}</mat-icon>
+        {{ descLabel() }}
+    </button>
+</mat-menu>

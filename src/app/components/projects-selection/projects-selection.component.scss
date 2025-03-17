@@ -1,0 +1,31 @@
+.project {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    grid-column-gap: 12px;
+
+    &__code {
+        white-space: nowrap;
+        position: relative;
+        box-sizing: border-box;
+        place-self: center;
+        overflow: hidden;
+
+        width: 40px;
+        height: 40px;
+        padding: 4px;
+
+        border-radius: var(--mat-sys-corner-small);
+        background-color: var(--mat-sys-primary-container);
+        color: var(--mat-sys-on-primary-container);
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset-inline: 0;
+            bottom: 0;
+            height: 4px;
+            background-color: var(--mat-sys-primary);
+        }
+    }
+}
