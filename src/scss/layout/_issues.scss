@@ -1,6 +1,6 @@
 @use '@angular/material' as mat;
 @mixin component() {
-  
+
     .heading {
         display: grid;
         grid-template-columns: 1fr;
@@ -21,5 +21,57 @@
         position: absolute;
         inset-inline: 0;
         top: 0;
+    }
+    /* Стили для контейнера задач */
+    .issues-container {
+        display: flex;
+        gap: 20px; /* Расстояние между секциями */
+        padding: 16px; /* Отступы внутри контейнера */
+    }
+
+    /* Стили для секции с открытыми задачами */
+    .open-issues {
+        flex: 1; /* Равномерное распределение пространства */
+        background-color: var(--mat-sys-surface-container-low);
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 10px 5px 5px red; /* Тень для визуального разделения */
+    }
+
+    /* Стили для секции с закрытыми задачами */
+    .closed-issues {
+        flex: 1; /* Равномерное распределение пространства */
+        background-color: var(--mat-sys-surface-container-low);
+        border-radius: 8px;
+        padding: 16px;
+        box-shadow: 10px 5px 5px red; /* Тень для визуального разделения */
+    }
+
+    /* Заголовки секций */
+    h2 {
+        margin-bottom: 16px;
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--mat-sys-on-surface);
+    }
+
+    /* Стили для элементов задач */
+    .element-container_issue {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        border-radius: 4px;
+        background-color: var(--mat-sys-surface-container-high);
+        margin-bottom: 8px;
+
+        &:hover {
+            background-color: var(--mat-sys-surface-container-hover);
+        }
+    }
+
+    /* Кнопки внутри элементов задач */
+    .element-container_issue button {
+        color: var(--mat-sys-on-surface);
     }
 }

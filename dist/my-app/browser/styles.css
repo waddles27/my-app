@@ -1,4 +1,8 @@
+@charset "UTF-8";
+
 /* src/styles.scss */
+html {
+}
 html {
   --mat-sys-background: light-dark(#fff8f7, #171212);
   --mat-sys-error: light-dark(#ba1a1a, #ffb4ab);
@@ -346,6 +350,46 @@ html .progress {
   position: absolute;
   inset-inline: 0;
   top: 0;
+}
+html .issues-container {
+  display: flex;
+  gap: 20px;
+  padding: 16px;
+}
+html .open-issues {
+  flex: 1;
+  background-color: var(--mat-sys-surface-container-low);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 10px 5px 5px red;
+}
+html .closed-issues {
+  flex: 1;
+  background-color: var(--mat-sys-surface-container-low);
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 10px 5px 5px red;
+}
+html h2 {
+  margin-bottom: 16px;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--mat-sys-on-surface);
+}
+html .element-container_issue {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  border-radius: 4px;
+  background-color: var(--mat-sys-surface-container-high);
+  margin-bottom: 8px;
+}
+html .element-container_issue:hover {
+  background-color: var(--mat-sys-surface-container-hover);
+}
+html .element-container_issue button {
+  color: var(--mat-sys-on-surface);
 }
 :root {
   color-scheme: light dark;

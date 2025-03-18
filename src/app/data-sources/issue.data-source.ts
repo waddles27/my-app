@@ -27,7 +27,7 @@ export class IssueDataSource extends BaseDataSource<IIssueListResponse, IIssueFi
     protected override defaultFilterRequest(): IIssueFilterRequest {
         return {
             searchTerm: '',
-            state: "Open",
+            state: undefined,
             projectIds: [],
             priorities: []
         };

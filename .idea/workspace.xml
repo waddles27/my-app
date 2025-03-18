@@ -5,94 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d4647d-a06f-48e5-ad06-4bbda13034c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.0.4/welcome-app/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.0.4/welcome-app/.tsbuildinfo" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.0.4/welcome-app/angular-compiler.db" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.0.4/welcome-app/angular-compiler.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/extensions.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/tasks.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/auth.component.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/button-select-arrow.component.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/chunk-HEUD5JXG.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/chunk-HEUD5JXG.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/chunk-JSNXX3Z3.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/chunk-JSNXX3Z3.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/issue-create.component.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/issue.component.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/issues.component.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/login.component.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/main.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/main.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/polyfills.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/polyfills.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/priorities-selection.component.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/projects-selection.component.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/secured-area.component.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/sign-up.component.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/browser/styles.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/welcome-app/prerendered-routes.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/docker/compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/image/Dockerfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/image/build-image.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/image/nginx/templates/default.conf.template" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker/nginx/templates/issue-tracker.conf.template" beforeDir="false" afterPath="$PROJECT_DIR$/docker/nginx/templates/issue-tracker.conf.template" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/add-issue/add-issue.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/add-issue/add-issue.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/add-project/add-project.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/add-project/add-project.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/dialogs/issue-create/issue-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/dialogs/issue-create/issue-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/dialogs/issue-create/issue-create.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/dialogs/issue-create/issue-create.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/dialogs/issue-create/issue-create.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/issue-sorting/issue-sorting.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/issue-sorting/issue-sorting.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/issue-sorting/issue-sorting.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/issue-view/issue-view.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/issue-view/issue-view.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/issue-view/issue-view.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/issue/issue.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/issue/issue.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/issue/issue.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/issue/issue.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/issue/issue.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/issue/issue.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/my-app/browser/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/my-app/browser/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/my-app/browser/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/my-app/browser/main.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/my-app/browser/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/my-app/browser/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/my-app/browser/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/my-app/browser/styles.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/data-sources/issue.data-source.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data-sources/issue.data-source.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/data-sources/project.data-source.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/data-sources/project.data-source.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/guards/auth-guard.guard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/guards/no-projects.guard.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/interfaces/responses/project/project-response.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/interfaces/responses/project/project-response.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/auth/auth.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/auth/auth.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/auth/auth.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/auth/auth.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/auth/auth.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/auth/auth.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/auth/login/login.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/auth/login/login.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/auth/sign-up/sign-up.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/auth/sign-up/sign-up.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/auth/sign-up/sign-up.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/auth/sign-up/sign-up.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout/issues/issues.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/issues/issues.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/issues/issues.component.scss" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/app/layout/issues/issues.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/issues/issues.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/projects/dialogs/create-project/create-project.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/projects/dialogs/create-project/create-project.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/projects/issues/issues.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/projects/issues/issues.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/projects/projects.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/projects/projects.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/projects/projects.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/projects/projects.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/secured-area/secured-area.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/secured-area/secured-area.component.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/secured-area/secured-area.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/issue.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/issue.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/project.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/project.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/types/issue.types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/types/issue.types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/_theme-colors.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/_theme-colors.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_index.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_issue.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_issue.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/styles.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/scss/layout/_issues.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/layout/_issues.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -138,6 +58,7 @@
       <workItem from="1742194178589" duration="4181000" />
       <workItem from="1742198649557" duration="1200000" />
       <workItem from="1742295146531" duration="5513000" />
+      <workItem from="1742305467550" duration="4281000" />
     </task>
     <servers />
   </component>
