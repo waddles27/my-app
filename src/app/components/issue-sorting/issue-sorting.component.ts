@@ -19,7 +19,6 @@ import {IssueSortByPipe} from '../../pipes/issue-sort-by.pipe';
         IssueSortByPipe,
     ],
     templateUrl: './issue-sorting.component.html',
-    styleUrl: './issue-sorting.component.scss'
 })
 export class IssueSortingComponent {
 

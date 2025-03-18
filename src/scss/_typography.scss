@@ -1,0 +1,31 @@
+@mixin _private-apply-font($type-scale) {
+  font-size: var(--mat-sys-#{$type-scale}-size);
+  font-weight: var(--mat-sys-#{$type-scale}-weight);
+  letter-spacing: var(--mat-sys-#{$type-scale}-tracking);
+  line-height: var(--mat-sys-#{$type-scale}-line-height);
+}
+
+@mixin typography-body-large() {
+  @include _private-apply-font(body-large);
+}
+
+@mixin typography-body-medium() {
+  @include _private-apply-font(body-medium);
+}
+
+@mixin typography-title-medium() {
+  @include _private-apply-font(title-medium);
+}
+
+@mixin typography-headline-large() {
+  @include _private-apply-font(headline-large);
+}
+
+@mixin typography-headline-small() {
+  @include _private-apply-font(headline-small);
+}
+
+@mixin typography-display-small() {
+  @include _private-apply-font(display-small);
+}
+

@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/components/dialogs/issue-create/issue-create.component.scss"],
-  "sourcesContent": [".content {\n    padding-top: 16px;\n}\n\n.form {\n    $fields: (\n        \"project\",\n        \"priority\",\n        \"name\",\n        \"description\"\n    );\n\n    display: grid;\n    grid-gap: 16px;\n    grid-template-columns: 1fr 1fr;\n    grid-template-rows: repeat(3, 1fr);\n    grid-template-areas: \"project priority\" \"name name\" \"description description\";\n\n    @each $field in $fields {\n        &__#{$field} {\n            grid-area: #{$field};\n        }\n    }\n}\n"],
-  "mappings": ";AAAA,CAAA;AACI,eAAA;;AAGJ,CAAA;AAQI,WAAA;AACA,YAAA;AACA,yBAAA,IAAA;AACA,sBAAA,OAAA,CAAA,EAAA;AACA,uBAAA,mBAAA,YAAA;;AAGI,CAAA;AACI,aAAA;;AADJ,CAAA;AACI,aAAA;;AADJ,CAAA;AACI,aAAA;;AADJ,CAAA;AACI,aAAA;;",
-  "names": []
-}

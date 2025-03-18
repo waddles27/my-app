@@ -1,7 +1,11 @@
 ﻿@use "./issue";
 @use "./issue-list";
+@use "./navigation";
+@use "./dialogs";
 
 @mixin all($component-prefix) {
   @include issue.component($component-prefix);
   @include issue-list.component();
+  @include navigation.component();
+  @include dialogs.component();
 }

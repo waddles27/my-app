@@ -1,5 +1,5 @@
-import {Component, computed, inject, Signal} from '@angular/core';
-import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
+import {Component, computed, Inject, inject, Signal} from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import {toSignal} from '@angular/core/rxjs-interop';
 import {IssueService} from '../../../services/issue.service';
@@ -19,9 +19,8 @@ import {ProjectDataSource} from '../../../data-sources/project.data-source';
       MatButtonModule
   ],
   templateUrl: './issue-create.component.html',
-  styleUrl: './issue-create.component.scss'
 })
-export class IssueCreateComponent {
+export class  IssueCreateComponent {
 
     private readonly _issueService = inject(IssueService);
     private readonly _dialogRef = inject(MatDialogRef<IssueCreateComponent>);
@@ -50,6 +49,11 @@ export class IssueCreateComponent {
 
     public get name(): FormControl {
         return this.createForm.controls['name'] as FormControl;
+    }
+
+    constructor(@Inject(MAT_DIALOG_DATA) public data: { projectId: string }) {
+        //console.log(this.data.proj.name);
+        this.createForm.controls['projectId'].patchValue(this.data.projectId);
     }
 
     public onCancel() {

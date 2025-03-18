@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["src/app/layout/secured-area/secured-area.component.scss"],
-  "sourcesContent": [":host {\n    display: grid;\n    grid-template-rows: min-content 1fr;\n    height: 100%;\n}\n\nmain {\n    padding-inline: 16px;\n    padding-bottom: 16px;\n}\n"],
-  "mappings": ";AAAA;AACI,WAAA;AACA,sBAAA,YAAA;AACA,UAAA;;AAGJ;AACI,kBAAA;AACA,kBAAA;;",
-  "names": []
-}

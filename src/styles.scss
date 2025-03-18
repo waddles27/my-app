@@ -1,72 +1,146 @@
 @use '@angular/material' as mat;
 @use 'scss/theme-colors' as test-theme;
+@use 'scss/typography' as typography;
 @use 'scss/components' as components;
+@use 'scss/layout' as layout;
 
 html {
-    @include mat.theme((
-        color: (
-            theme-type: color-scheme,
-            primary: test-theme.$primary-palette,
-            tertiary: test-theme.$tertiary-palette,
-        ),
-        typography: Roboto,
-        density: 0,
-    ));
+  @include mat.theme((
+    color: (
+      theme-type: color-scheme,
+      primary: test-theme.$primary-palette,
+      tertiary: test-theme.$tertiary-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
 
-    @include mat.theme-overrides((
-    ));
+  @include mat.theme-overrides((
+  ));
+  @include mat.icon-overrides((
+    color: var(--mat-sys-secondary)
+  ));
 
-    @include mat.toolbar-overrides((
-        container-background-color: var(--mat-sys-surface-container-highest)
-    ));
-
-    @include mat.button-overrides((
-        container-shape: var(--mat-sys-corner-small)
-    ));
-
-    @include mat.menu-overrides((
-        item-with-icon-trailing-spacing: 24px
-    ));
-
-    @include components.all('app');
+  @include components.all('app');
+  @include layout.all();
 }
 
 :root {
-    color-scheme: light dark;
+  color-scheme: light dark;
 }
 
 html, body {
-    margin: 0;
-    height: 100%;
+  margin: 0;
+  height: 100%;
 }
 
 body {
-    display: grid;
-    font-family: "Roboto", sans-serif;
-
-    background-color: var(--mat-sys-surface-container-highest);
-    color: var(--md-sys-color-on-surface);
+  display: grid;
+  font-family: "Roboto", sans-serif;
 }
 
-.app-projects {
-    display: grid;
-    grid-template-columns: 280px 1fr;
-    grid-template-rows: min-content 1fr;
-    grid-template-areas: "cta issues" "projects issues";
 
-    .cta-container {
-        grid-area: cta;
-    }
+.app-layout {
+  display: grid;
+  height: 100%;
+  grid-template-rows: min-content 1fr;
+  grid-row-gap: 16px;
+  overflow: hidden;
 
-    .projects-container {
-        grid-area: projects;
-    }
+  @include mat.list-overrides((list-item-leading-avatar-shape: var(--mat-sys-corner-small),
+  ));
 
-    .issues-container {
-        grid-area: issues;
-    }
 }
+
+
+mat-dialog-content {
+  form {
+    display: grid;
+    gap: 16px;
+  }
+}
+
 
 .filler {
-    flex-grow: 1;
+  flex-grow: 1;
 }
+
+.layout-head {
+  @include mat.form-field-overrides((outlined-container-shape: var(--mat-sys-corner-extra-large),
+        outlined-outline-width: 0,
+        outlined-focus-outline-width: 0,
+        container-vertical-padding: 8px,
+        container-height: 40px));
+
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: max-content;
+    grid-column-gap: 16px;
+    align-items: center;
+}
+
+.search {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+
+  border-radius: var(--mat-sys-corner-extra-large);
+  background-color: var(--mat-sys-surface-container-high);
+
+  &:hover {
+      --_state-layer-opacity: var(--mat-sys-hover-state-layer-opacity);
+  }
+
+  &::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background-color: currentColor;
+      border-radius: inherit;
+      transition: opacity 150ms linear;
+
+      opacity: var(--_state-layer-opacity, 0);
+  }
+
+  &__prefix {
+      margin-left: 4px;
+  }
+
+  &__suffix {
+      margin-right: 8px;
+  }
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid-auto-rows: min-content;
+  overflow: hidden;
+  gap: 8px;
+  border-radius: var(--mat-sys-corner-large);
+  background-color: var(--mat-sys-surface-container);
+}
+
+
+.element-container {
+
+  &_issue {
+    grid-template-columns: min-content 1fr min-content;
+  }
+
+  display: grid;
+  gap: 8px;
+  padding: 4px 16px;
+  grid-template-columns: min-content 1fr;
+  align-items: center;
+}
+
+.mat-flat-button {
+  @include mat.icon-overrides((
+    color: var(--mat-sys-surface-container)
+  ));
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

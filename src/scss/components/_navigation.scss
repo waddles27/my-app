@@ -1,0 +1,63 @@
+@mixin component() {
+  .sidenav-container {
+    height: 100%;
+    padding-top: 64px;
+  }
+  
+  .sidenav {
+    box-shadow: 2px 2px 8px 0px var(--mat-sys-background);
+    width: 200px;
+    padding: 64px 16px;
+    background-color: var(--mat-sys-surface-container);
+  }
+
+  .sidenav-rail {
+    width: 90px;
+  
+    .nav-item, .mat-toolbar {
+      justify-content: center;
+    }
+  }
+  
+  .sidenav .mat-toolbar {
+    background: inherit;
+  }
+  
+  .mat-toolbar.mat-primary {
+    position: sticky;
+    top: 0;
+    z-index: 1; 
+  }
+  
+  .mat-divider {
+    margin: 0 16px;
+  }
+  
+  .mat-nav-list {
+    gap: 8px;
+    display: grid;
+  }
+
+  .nav-item{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    height: 48px;
+  }
+
+  .toolbar {
+    background-color: var(--mat-sys-surface-container);
+    position: fixed; 
+    z-index: 2; 
+    padding: 0 24px;
+    gap: 8px;
+    box-shadow: 2px 2px 8px 0px var(--mat-sys-background);
+  }
+
+  main {
+    padding-inline: 16px;
+    padding-bottom: 16px;
+    padding-top: 16px;
+  }
+
+}

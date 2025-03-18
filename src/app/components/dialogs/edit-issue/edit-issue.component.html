@@ -1,0 +1,47 @@
+<h2 mat-dialog-title>Edit issue</h2>
+
+<mat-dialog-content>
+
+    <div class="content">
+        <form [formGroup]="editForm" class="issue-create-form" (ngSubmit)="onEdit()">
+
+            <mat-form-field class="form__project">
+                <mat-label>Project</mat-label>
+                <mat-select formControlName="projectId">
+                    @for (project of projectDataSource.data(); track project.id) {
+                        <mat-option [value]="project.id">{{ project.name }}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="form__priority">
+                <mat-label>Priority</mat-label>
+                <mat-select formControlName="priority">
+                    @for (priority of selectablePriorities; track priority) {
+                        <mat-option [value]="priority">{{ priority }}</mat-option>
+                    }
+                </mat-select>
+            </mat-form-field>
+
+            <mat-form-field class="form__name">
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name">
+                @if (name.hasError('required')) {
+                    <mat-error>Name is <strong>required</strong></mat-error>
+                }
+            </mat-form-field>
+
+            <mat-form-field class="form__description">
+                <mat-label>Description</mat-label>
+                <input matInput formControlName="description">
+            </mat-form-field>
+
+        </form>
+    </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button (click)="onEdit()" [disabled]="isInvalidState()">Edit</button>
+</mat-dialog-actions>

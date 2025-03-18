@@ -1,25 +1,47 @@
-<div class="cta-container">
-    <a mat-button routerLink="new">Create Project</a>
-
-    <form [formGroup]="filterForm">
-
-        <mat-form-field>
-            <mat-label>Search</mat-label>
-            <input matInput formControlName="searchTerm">
-        </mat-form-field>
-
-    </form>
-
+<div class="layout-head">
+  <mat-form-field subscriptSizing="dynamic" class="search">
+      <mat-icon matIconPrefix class="search__prefix">search</mat-icon>
+      <input matInput placeholder="Search" [formControl]="searchControl">
+      @if (searchControl.value) {
+      <button matSuffix mat-icon-button class="search__suffix" (click)="searchControl.setValue('')">
+          <mat-icon>close</mat-icon>
+      </button>
+      }
+  </mat-form-field>
+  <button mat-flat-button class="mat-flat-button" (click)="createProject()">
+    <mat-icon>note_add</mat-icon>
+    New Project
+  </button>
 </div>
 
-<div class="projects-container">
-    <mat-nav-list>
-        @for (project of dataSource.data(); track project.id) {
-            <a mat-list-item routerLink="{{ project.id }}" routerLinkActive="active">{{ project.name }}</a>
-        }
-    </mat-nav-list>
-</div>
+<div class="container">
+  <div class="content">
+      @if (!dataSource.isLoading()) {
+      <mat-action-list>
+          @for (project of dataSource.data(); track project.id) {
+          <div mat-list-item class="element-container">
+            <button mat-icon-button [matMenuTriggerFor]="menu">
+              <mat-icon>more_vert</mat-icon>
+            </button>
+            <app-project [project]="project"></app-project>
+          </div>
 
-<div class="issues-container">
-    <router-outlet/>
+          <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="createIssue(project.id)">
+              <mat-icon>pest_control</mat-icon>
+              <span>Add issue</span>
+            </button>
+            <button mat-menu-item mat-error
+              (click)="deleteProject(project.id)">
+              <mat-icon>delete</mat-icon>
+              <span>Delete</span>
+            </button>
+          </mat-menu>
+          }
+      </mat-action-list>
+
+      } @else {
+      <mat-progress-bar mode="indeterminate" class="progress"></mat-progress-bar>
+      }
+  </div>
 </div>

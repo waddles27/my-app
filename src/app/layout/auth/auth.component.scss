@@ -1,30 +1,27 @@
-@mixin _private-apply-font($type-scale) {
-    font-size: var(--mat-sys-#{$type-scale}-size);
-    font-weight: var(--mat-sys-#{$type-scale}-weight);
-    letter-spacing: var(--mat-sys-#{$type-scale}-tracking);
-    line-height: var(--mat-sys-#{$type-scale}-line-height);
-}
-
+@use '../../../scss/typography';
 :host {
-    grid-template-rows: min-content 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-        "brand"
-        "content";
-
+    display: grid;
+    height: 100%;
+    
     .brand {
-        @include _private-apply-font(display-medium);
-
-        grid-area: brand;
+        @include typography.typography-display-small();
         display: grid;
+        grid-template-columns: 1fr min-content;
+        padding-bottom: 24px;
         place-items: center;
-        margin: 30px;
-
-        color: var(--mat-sys-primary);
+        width: 300px;
     }
 
     main {
-        grid-area: content;
         place-self: center;
     }
+}
+
+
+.material-symbols-outlined {
+    height: 40px;
+    width: 40px;
+    font-size: inherit;
+    align-items: center;
+    display: flex;
 }

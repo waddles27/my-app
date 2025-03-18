@@ -1,0 +1,5 @@
+﻿@use "./issues";
+
+@mixin all() {
+  @include issues.component();
+}

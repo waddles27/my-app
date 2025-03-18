@@ -1,0 +1,27 @@
+@mixin component() {
+    .content {
+        padding-top: 16px;
+    }
+
+    .issue-create-form {
+        $fields: (
+            "project",
+            "priority",
+            "name",
+            "description"
+        );
+    
+        display: grid;
+        grid-gap: 16px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "project priority" "name name" "description description";
+    
+        @each $field in $fields {
+            &__#{$field} {
+                grid-area: #{$field};
+            }
+        }
+    }
+    
+}

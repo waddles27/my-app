@@ -4,7 +4,7 @@ import {rxResource} from '@angular/core/rxjs-interop';
 import {BaseDataSource} from './base.data-source';
 import {IIssueFilterRequest} from '../interfaces/requests/project/issue-filter-request';
 import {IPageResponse} from '../interfaces/responses/page-response';
-import {IIssueListResponse} from '../interfaces/responses/issue/issue-list-response.interface';
+import { IIssueListResponse } from '../interfaces/responses/project/issue-list-response';
 
 export class IssueDataSource extends BaseDataSource<IIssueListResponse, IIssueFilterRequest> {
 

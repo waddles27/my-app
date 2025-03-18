@@ -1,19 +1,20 @@
 import {inject, Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders, HttpParams} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import {Observable, of} from 'rxjs';
 import {IIssue} from '../interfaces/issue.interface';
-import {IIssueRequest} from '../interfaces/requests/issue-request.interface';
+import { IIssueRequest } from '../interfaces/requests/issue-request.interface';
 import {IPageRequest} from '../interfaces/requests/page-request';
 import {ISortRequest} from '../interfaces/requests/sort-request';
 import {IPageResponse} from '../interfaces/responses/page-response';
 import {IIssueFilterRequest} from '../interfaces/requests/project/issue-filter-request';
-import {IIssueListResponse} from '../interfaces/responses/issue/issue-list-response.interface';
-import {IIssueDetailResponse} from '../interfaces/responses/issue/issue-detail-response.interface';
-import {ICreateIssueRequest} from '../interfaces/requests/issue/create-issue-request.interface';
+import {IIssueListResponse} from '../interfaces/responses/project/issue-list-response';
+import { IIssueDetailResponse } from '../interfaces/responses/issue/issue-detail-response.interface';
+import { ICreateIssueRequest } from '../interfaces/requests/issue/create-issue-request.interface';
 
 @Injectable({
-    providedIn: 'root'
+  providedIn: 'root'
 })
+
 export class IssueService {
     private readonly _http = inject(HttpClient);
 
@@ -62,5 +63,14 @@ export class IssueService {
 
     public createIssue(request: ICreateIssueRequest): Observable<IIssueListResponse> {
         return this._http.post<IIssueListResponse>(this._apiPath, JSON.stringify(request));
+    }
+
+    public editIssue(request: IIssueRequest, issueId: string): Observable<IIssue> {
+        const headers = new HttpHeaders({ 'Content-Type': 'application/json' });
+        return this._http.put<IIssue>(`${this._apiPath}/${issueId}`, JSON.stringify(request), { headers: headers });
+    }
+
+    public deleteIssue(issueId: string): Observable<IIssue> {
+        return this._http.delete<IIssue>(`${this._apiPath}/${issueId}`);
     }
 }

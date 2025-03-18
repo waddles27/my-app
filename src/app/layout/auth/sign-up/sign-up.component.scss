@@ -1,9 +1,4 @@
-@mixin _private-apply-font($type-scale) {
-    font-size: var(--mat-sys-#{$type-scale}-size);
-    font-weight: var(--mat-sys-#{$type-scale}-weight);
-    letter-spacing: var(--mat-sys-#{$type-scale}-tracking);
-    line-height: var(--mat-sys-#{$type-scale}-line-height);
-}
+@use '../../../../scss/typography';
 
 :host {
     display: grid;
@@ -45,8 +40,7 @@
 }
 
 .title {
-    @include _private-apply-font(headline-small);
-
+    @include typography.typography-headline-small();
     margin: 0;
 }
 

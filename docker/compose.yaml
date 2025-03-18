@@ -5,7 +5,7 @@ services:
         image: nginx:1.27-alpine
         volumes:
             - ./nginx/templates:/etc/nginx/templates
-            - ../dist/welcome-app/browser:/usr/share/nginx/html
+            - ../dist/my-app/browser:/usr/share/nginx/html
         container_name: nginx
         networks:
             - cm25
@@ -28,7 +28,7 @@ services:
         networks:
             - cm25
     frontend:
-        image: vordi/cm25-client:0.1.0
+        image: dardar27/cm25-client
         container_name: frontend
         networks:
             - cm25

@@ -6,7 +6,6 @@ import {rxResource} from '@angular/core/rxjs-interop';
     selector: 'app-issue-view',
     imports: [],
     templateUrl: './issue-view.component.html',
-    styleUrl: './issue-view.component.scss'
 })
 export class IssueViewComponent {
 
