@@ -1,13 +1,12 @@
 <mat-toolbar class="toolbar">
     <button *ngIf="(isHandset$ | async) || (isTablet$ | async)"
-      type="button"
-      aria-label="Toggle sidenav"
-      mat-icon-button
-      (click)="drawer.toggle()">
-      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
     </button>
     <h1>My-App</h1>
-    <span class="filler"></span>
     <button mat-button [matMenuTriggerFor]="menu">
         <mat-icon>account_circle</mat-icon>
         {{ authService.authData()?.name }}
@@ -18,65 +17,85 @@
     </mat-menu>
 </mat-toolbar>
 
+
 <mat-sidenav-container class="sidenav-container">
 
-  <mat-sidenav  #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="((isHandset$ | async) || (isTablet$ | async)) ? 'over' : 'side'"
-      [opened]="(isWeb$ | async)">
-    <mat-nav-list class="mat-nav-list">
+    <mat-sidenav #drawer class="sidenav" fixedInViewport
+                 [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+                 [mode]="((isHandset$ | async) || (isTablet$ | async)) ? 'over' : 'side'"
+                 [opened]="(isWeb$ | async)">
+        <mat-nav-list class="mat-nav-list">
 
-      <a mat-list-item routerLink="projects" routerLinkActive="active">
+            <a mat-list-item routerLink="projects" routerLinkActive="active">
         <span class="nav-item">
-          <mat-icon></mat-icon>
+          <mat-icon>folder</mat-icon>
           <span>Projects</span>
         </span>
-      </a>
-        <a mat-list-item routerLink="" >
+            </a>
+            <a mat-list-item routerLink="">
         <span class="nav-item">
-          <mat-icon></mat-icon>
+          <mat-icon>grading</mat-icon>
           <span>Issues</span>
         </span>
-        </a>
-      <mat-divider class="mat-divider"></mat-divider>
-      <a mat-list-item href="#" (click)="authService.signOut()">
+            </a>
+            <mat-divider class="mat-divider"></mat-divider>
+            <a mat-list-item href="#" (click)="authService.signOut()">
         <span class="nav-item">
           <mat-icon>output</mat-icon>
           <span>Output</span>
         </span>
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
 
-  @if ((isTablet$ | async) && drawer.opened === false) {
-  <mat-sidenav  #rail class="sidenav sidenav-rail" fixedInViewport
-    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-    [mode]="'side'"
-    [opened]="((isHandset$ | async) || (isTablet$ | async))">
-    <mat-nav-list class="mat-nav-list">
-      <a mat-list-item routerLink="" routerLinkActive="active">
-        <span class="nav-item">
-          <mat-icon>pest_control</mat-icon>
-        </span>
-      </a>
-      <a mat-list-item routerLink="projects" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-        <span class="nav-item">
-          <mat-icon>description</mat-icon>
-        </span>
-      </a>
-      <mat-divider class="mat-divider"></mat-divider>
-      <a mat-list-item href="#" (click)="authService.signOut()">
-        <span class="nav-item">
-          <mat-icon>output</mat-icon>
-        </span>
-      </a>
-    </mat-nav-list>
-  </mat-sidenav>
-  }
+    @if (isTablet$ | async) {
+        <mat-sidenav #rail class="sidenav sidenav-rail" fixedInViewport
+                     role="navigation"
+                     mode="side"
+                     opened="true">
+            <mat-nav-list class="mat-nav-list">
+                <a mat-list-item routerLink="projects" routerLinkActive="active"
+                   [routerLinkActiveOptions]="{ exact: true }">
+                <span class="nav-item">
+                    <mat-icon>folder</mat-icon>
+                </span>
+                </a>
+                <a mat-list-item routerLink="" routerLinkActive="active">
+                <span class="nav-item">
+                    <mat-icon>grading</mat-icon>
+                </span>
+                </a>
+                <mat-divider class="mat-divider"></mat-divider>
+                <a mat-list-item href="#" (click)="authService.signOut()">
+                <span class="nav-item">
+                    <mat-icon>output</mat-icon>
+                </span>
+                </a>
+            </mat-nav-list>
+        </mat-sidenav>
+    }
 
-  <mat-sidenav-content>
-    <main>
-      <router-outlet />
-    </main>
-  </mat-sidenav-content>
+    @if (isHandset$ | async) {
+        <nav class="bottom-nav">
+            <a mat-button routerLink="/projects">
+                <mat-icon>description</mat-icon>
+                <span>Projects</span>
+            </a>
+            <a mat-button routerLink="/issues">
+                <mat-icon>grading</mat-icon>
+                <span>Issues</span>
+            </a>
+            <a mat-button (click)="authService.signOut()">
+                <mat-icon>logout</mat-icon>
+                <span>Sign Out</span>
+            </a>
+        </nav>
+    }
+
+
+    <mat-sidenav-content>
+        <main>
+            <router-outlet/>
+        </main>
+    </mat-sidenav-content>
 </mat-sidenav-container>

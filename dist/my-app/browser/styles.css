@@ -4,57 +4,57 @@
 html {
 }
 html {
-  --mat-sys-background: light-dark(#fff8f7, #171212);
+  --mat-sys-background: light-dark(#fcf9f6, #131312);
   --mat-sys-error: light-dark(#ba1a1a, #ffb4ab);
   --mat-sys-error-container: light-dark(#ffdad6, #93000a);
-  --mat-sys-inverse-on-surface: light-dark(#faeeed, #352f2f);
-  --mat-sys-inverse-primary: light-dark(#f8b6b5, #845051);
-  --mat-sys-inverse-surface: light-dark(#352f2f, #ebe0df);
-  --mat-sys-on-background: light-dark(#1f1a1a, #ebe0df);
+  --mat-sys-inverse-on-surface: light-dark(#f3f0ee, #31302f);
+  --mat-sys-inverse-primary: light-dark(#c3c9b9, #5a6053);
+  --mat-sys-inverse-surface: light-dark(#31302f, #e5e2e0);
+  --mat-sys-on-background: light-dark(#1c1c1a, #e5e2e0);
   --mat-sys-on-error: light-dark(#ffffff, #690005);
   --mat-sys-on-error-container: light-dark(#410002, #ffdad6);
-  --mat-sys-on-primary: light-dark(#ffffff, #4e2425);
-  --mat-sys-on-primary-container: light-dark(#340f11, #ffdad9);
-  --mat-sys-on-primary-fixed: light-dark(#340f11, #340f11);
-  --mat-sys-on-primary-fixed-variant: light-dark(#68393a, #68393a);
-  --mat-sys-on-secondary: light-dark(#ffffff, #412b2b);
-  --mat-sys-on-secondary-container: light-dark(#291616, #fedad9);
-  --mat-sys-on-secondary-fixed: light-dark(#291616, #291616);
-  --mat-sys-on-secondary-fixed-variant: light-dark(#594140, #594140);
-  --mat-sys-on-surface: light-dark(#1f1a1a, #ebe0df);
-  --mat-sys-on-surface-variant: light-dark(#514343, #f3dedd);
-  --mat-sys-on-tertiary: light-dark(#ffffff, #422c01);
-  --mat-sys-on-tertiary-container: light-dark(#281900, #ffdeac);
-  --mat-sys-on-tertiary-fixed: light-dark(#281900, #281900);
-  --mat-sys-on-tertiary-fixed-variant: light-dark(#5b4215, #5b4215);
-  --mat-sys-outline: light-dark(#847373, #9e8d8c);
-  --mat-sys-outline-variant: light-dark(#d6c2c1, #514343);
-  --mat-sys-primary: light-dark(#845051, #f8b6b5);
-  --mat-sys-primary-container: light-dark(#ffdad9, #68393a);
-  --mat-sys-primary-fixed: light-dark(#ffdad9, #ffdad9);
-  --mat-sys-primary-fixed-dim: light-dark(#f8b6b5, #f8b6b5);
+  --mat-sys-on-primary: light-dark(#ffffff, #2c3227);
+  --mat-sys-on-primary-container: light-dark(#181d13, #dfe5d4);
+  --mat-sys-on-primary-fixed: light-dark(#181d13, #181d13);
+  --mat-sys-on-primary-fixed-variant: light-dark(#43493c, #43493c);
+  --mat-sys-on-secondary: light-dark(#ffffff, #2f312c);
+  --mat-sys-on-secondary-container: light-dark(#1a1c17, #e2e3db);
+  --mat-sys-on-secondary-fixed: light-dark(#1a1c17, #1a1c17);
+  --mat-sys-on-secondary-fixed-variant: light-dark(#454742, #454742);
+  --mat-sys-on-surface: light-dark(#1c1c1a, #e5e2e0);
+  --mat-sys-on-surface-variant: light-dark(#454841, #e2e3da);
+  --mat-sys-on-tertiary: light-dark(#ffffff, #273233);
+  --mat-sys-on-tertiary-container: light-dark(#121e1e, #d8e5e5);
+  --mat-sys-on-tertiary-fixed: light-dark(#121e1e, #121e1e);
+  --mat-sys-on-tertiary-fixed-variant: light-dark(#3d4949, #3d4949);
+  --mat-sys-outline: light-dark(#767870, #90928a);
+  --mat-sys-outline-variant: light-dark(#c6c7bf, #454841);
+  --mat-sys-primary: light-dark(#5a6053, #c3c9b9);
+  --mat-sys-primary-container: light-dark(#dfe5d4, #43493c);
+  --mat-sys-primary-fixed: light-dark(#dfe5d4, #dfe5d4);
+  --mat-sys-primary-fixed-dim: light-dark(#c3c9b9, #c3c9b9);
   --mat-sys-scrim: light-dark(#000000, #000000);
-  --mat-sys-secondary: light-dark(#725857, #e1bebe);
-  --mat-sys-secondary-container: light-dark(#fedad9, #594140);
-  --mat-sys-secondary-fixed: light-dark(#fedad9, #fedad9);
-  --mat-sys-secondary-fixed-dim: light-dark(#e1bebe, #e1bebe);
+  --mat-sys-secondary: light-dark(#5d5f59, #c6c7bf);
+  --mat-sys-secondary-container: light-dark(#e2e3db, #454742);
+  --mat-sys-secondary-fixed: light-dark(#e2e3db, #e2e3db);
+  --mat-sys-secondary-fixed-dim: light-dark(#c6c7bf, #c6c7bf);
   --mat-sys-shadow: light-dark(#000000, #000000);
-  --mat-sys-surface: light-dark(#fff8f7, #171212);
-  --mat-sys-surface-bright: light-dark(#fff8f7, #3e3837);
-  --mat-sys-surface-container: light-dark(#f7ebea, #241e1e);
-  --mat-sys-surface-container-high: light-dark(#f1e6e5, #2e2928);
-  --mat-sys-surface-container-highest: light-dark(#ebe0df, #3e3837);
-  --mat-sys-surface-container-low: light-dark(#fdf1f0, #1f1a1a);
-  --mat-sys-surface-container-lowest: light-dark(#ffffff, #120d0d);
-  --mat-sys-surface-dim: light-dark(#e2d8d7, #171212);
-  --mat-sys-surface-tint: light-dark(#845051, #f8b6b5);
-  --mat-sys-surface-variant: light-dark(#f3dedd, #514343);
-  --mat-sys-tertiary: light-dark(#755a2a, #e6c188);
-  --mat-sys-tertiary-container: light-dark(#ffdeac, #5b4215);
-  --mat-sys-tertiary-fixed: light-dark(#ffdeac, #ffdeac);
-  --mat-sys-tertiary-fixed-dim: light-dark(#e6c188, #e6c188);
-  --mat-sys-neutral-variant20: #3a2d2d;
-  --mat-sys-neutral10: #1f1a1a;
+  --mat-sys-surface: light-dark(#fcf9f6, #131312);
+  --mat-sys-surface-bright: light-dark(#fcf9f6, #3a3938);
+  --mat-sys-surface-container: light-dark(#f0edeb, #20201e);
+  --mat-sys-surface-container-high: light-dark(#ebe8e5, #2a2a29);
+  --mat-sys-surface-container-highest: light-dark(#e5e2e0, #3a3938);
+  --mat-sys-surface-container-low: light-dark(#f6f3f1, #1c1c1a);
+  --mat-sys-surface-container-lowest: light-dark(#ffffff, #0e0e0d);
+  --mat-sys-surface-dim: light-dark(#dcd9d7, #131312);
+  --mat-sys-surface-tint: light-dark(#5a6053, #c3c9b9);
+  --mat-sys-surface-variant: light-dark(#e2e3da, #454841);
+  --mat-sys-tertiary: light-dark(#556161, #bcc9c9);
+  --mat-sys-tertiary-container: light-dark(#d8e5e5, #3d4949);
+  --mat-sys-tertiary-fixed: light-dark(#d8e5e5, #d8e5e5);
+  --mat-sys-tertiary-fixed-dim: light-dark(#bcc9c9, #bcc9c9);
+  --mat-sys-neutral-variant20: #2f312b;
+  --mat-sys-neutral10: #1c1c1a;
 }
 html {
   --mat-sys-level0:
@@ -306,11 +306,37 @@ html .toolbar {
   padding: 0 24px;
   gap: 8px;
   box-shadow: 2px 2px 8px 0px var(--mat-sys-background);
+  justify-content: space-between;
+  align-items: center;
 }
 html main {
   padding-inline: 16px;
   padding-bottom: 16px;
   padding-top: 16px;
+}
+html .bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: var(--mat-sys-surface-container);
+  box-shadow: 0px -2px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0;
+  z-index: 1000;
+}
+html .bottom-nav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  gap: 4px;
+}
+html .bottom-nav mat-icon {
+  font-size: 24px;
 }
 html .content {
   padding-top: 16px;

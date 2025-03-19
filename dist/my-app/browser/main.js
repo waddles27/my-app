@@ -46980,7 +46980,7 @@ function NavigationComponent_button_1_Template(rf, ctx) {
     \u0275\u0275listener("click", function NavigationComponent_button_1_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r2);
       \u0275\u0275nextContext();
-      const drawer_r3 = \u0275\u0275reference(17);
+      const drawer_r3 = \u0275\u0275reference(16);
       return \u0275\u0275resetView(drawer_r3.toggle());
     });
     \u0275\u0275elementStart(1, "mat-icon", 18);
@@ -46988,36 +46988,58 @@ function NavigationComponent_button_1_Template(rf, ctx) {
     \u0275\u0275elementEnd()();
   }
 }
-function NavigationComponent_Conditional_40_Template(rf, ctx) {
+function NavigationComponent_Conditional_41_Template(rf, ctx) {
   if (rf & 1) {
     const _r4 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "mat-sidenav", 16, 2);
-    \u0275\u0275pipe(2, "async");
-    \u0275\u0275pipe(3, "async");
-    \u0275\u0275pipe(4, "async");
-    \u0275\u0275elementStart(5, "mat-nav-list", 10)(6, "a", 19)(7, "span", 12)(8, "mat-icon");
-    \u0275\u0275text(9, "pest_control");
+    \u0275\u0275elementStart(0, "mat-sidenav", 15, 2)(2, "mat-nav-list", 9)(3, "a", 19)(4, "span", 11)(5, "mat-icon");
+    \u0275\u0275text(6, "folder");
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(10, "a", 20)(11, "span", 12)(12, "mat-icon");
-    \u0275\u0275text(13, "description");
+    \u0275\u0275elementStart(7, "a", 20)(8, "span", 11)(9, "mat-icon");
+    \u0275\u0275text(10, "problem");
     \u0275\u0275elementEnd()()();
-    \u0275\u0275element(14, "mat-divider", 14);
-    \u0275\u0275elementStart(15, "a", 15);
-    \u0275\u0275listener("click", function NavigationComponent_Conditional_40_Template_a_click_15_listener() {
+    \u0275\u0275element(11, "mat-divider", 13);
+    \u0275\u0275elementStart(12, "a", 14);
+    \u0275\u0275listener("click", function NavigationComponent_Conditional_41_Template_a_click_12_listener() {
       \u0275\u0275restoreView(_r4);
       const ctx_r4 = \u0275\u0275nextContext();
       return \u0275\u0275resetView(ctx_r4.authService.signOut());
     });
-    \u0275\u0275elementStart(16, "span", 12)(17, "mat-icon");
-    \u0275\u0275text(18, "output");
+    \u0275\u0275elementStart(13, "span", 11)(14, "mat-icon");
+    \u0275\u0275text(15, "output");
     \u0275\u0275elementEnd()()()()();
   }
   if (rf & 2) {
-    const ctx_r4 = \u0275\u0275nextContext();
-    \u0275\u0275property("mode", "side")("opened", \u0275\u0275pipeBind1(2, 4, ctx_r4.isHandset$) || \u0275\u0275pipeBind1(3, 6, ctx_r4.isTablet$));
-    \u0275\u0275attribute("role", \u0275\u0275pipeBind1(4, 8, ctx_r4.isHandset$) ? "dialog" : "navigation");
-    \u0275\u0275advance(10);
-    \u0275\u0275property("routerLinkActiveOptions", \u0275\u0275pureFunction0(10, _c013));
+    \u0275\u0275advance(3);
+    \u0275\u0275property("routerLinkActiveOptions", \u0275\u0275pureFunction0(1, _c013));
+  }
+}
+function NavigationComponent_Conditional_43_Template(rf, ctx) {
+  if (rf & 1) {
+    const _r6 = \u0275\u0275getCurrentView();
+    \u0275\u0275elementStart(0, "nav", 16)(1, "a", 21)(2, "mat-icon");
+    \u0275\u0275text(3, "description");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(4, "span");
+    \u0275\u0275text(5, "Projects");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(6, "a", 22)(7, "mat-icon");
+    \u0275\u0275text(8, "bug_report");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(9, "span");
+    \u0275\u0275text(10, "Issues");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(11, "a", 23);
+    \u0275\u0275listener("click", function NavigationComponent_Conditional_43_Template_a_click_11_listener() {
+      \u0275\u0275restoreView(_r6);
+      const ctx_r4 = \u0275\u0275nextContext();
+      return \u0275\u0275resetView(ctx_r4.authService.signOut());
+    });
+    \u0275\u0275elementStart(12, "mat-icon");
+    \u0275\u0275text(13, "logout");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(14, "span");
+    \u0275\u0275text(15, "Sign Out");
+    \u0275\u0275elementEnd()()();
   }
 }
 var NavigationComponent = class _NavigationComponent {
@@ -47029,7 +47051,7 @@ var NavigationComponent = class _NavigationComponent {
   static \u0275fac = function NavigationComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _NavigationComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavigationComponent, selectors: [["app-navigation"]], decls: 45, vars: 21, consts: [["menu", "matMenu"], ["drawer", ""], ["rail", ""], [1, "toolbar"], ["type", "button", "aria-label", "Toggle sidenav", "mat-icon-button", "", 3, "click", 4, "ngIf"], [1, "filler"], ["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], [1, "sidenav-container"], ["fixedInViewport", "", 1, "sidenav", 3, "mode", "opened"], [1, "mat-nav-list"], ["mat-list-item", "", "routerLink", "projects", "routerLinkActive", "active"], [1, "nav-item"], ["mat-list-item", "", "routerLink", ""], [1, "mat-divider"], ["mat-list-item", "", "href", "#", 3, "click"], ["fixedInViewport", "", 1, "sidenav", "sidenav-rail", 3, "mode", "opened"], ["type", "button", "aria-label", "Toggle sidenav", "mat-icon-button", "", 3, "click"], ["aria-label", "Side nav toggle icon"], ["mat-list-item", "", "routerLink", "", "routerLinkActive", "active"], ["mat-list-item", "", "routerLink", "projects", "routerLinkActive", "active", 3, "routerLinkActiveOptions"]], template: function NavigationComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _NavigationComponent, selectors: [["app-navigation"]], decls: 48, vars: 24, consts: [["menu", "matMenu"], ["drawer", ""], ["rail", ""], [1, "toolbar"], ["type", "button", "aria-label", "Toggle sidenav", "mat-icon-button", "", 3, "click", 4, "ngIf"], ["mat-button", "", 3, "matMenuTriggerFor"], ["mat-menu-item", "", 3, "click"], [1, "sidenav-container"], ["fixedInViewport", "", 1, "sidenav", 3, "mode", "opened"], [1, "mat-nav-list"], ["mat-list-item", "", "routerLink", "projects", "routerLinkActive", "active"], [1, "nav-item"], ["mat-list-item", "", "routerLink", ""], [1, "mat-divider"], ["mat-list-item", "", "href", "#", 3, "click"], ["fixedInViewport", "", "role", "navigation", "mode", "side", "opened", "true", 1, "sidenav", "sidenav-rail"], [1, "bottom-nav"], ["type", "button", "aria-label", "Toggle sidenav", "mat-icon-button", "", 3, "click"], ["aria-label", "Side nav toggle icon"], ["mat-list-item", "", "routerLink", "projects", "routerLinkActive", "active", 3, "routerLinkActiveOptions"], ["mat-list-item", "", "routerLink", "", "routerLinkActive", "active"], ["mat-button", "", "routerLink", "/projects"], ["mat-button", "", "routerLink", "/issues"], ["mat-button", "", 3, "click"]], template: function NavigationComponent_Template(rf, ctx) {
     if (rf & 1) {
       const _r1 = \u0275\u0275getCurrentView();
       \u0275\u0275elementStart(0, "mat-toolbar", 3);
@@ -47039,72 +47061,77 @@ var NavigationComponent = class _NavigationComponent {
       \u0275\u0275elementStart(4, "h1");
       \u0275\u0275text(5, "My-App");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(6, "span", 5);
-      \u0275\u0275elementStart(7, "button", 6)(8, "mat-icon");
-      \u0275\u0275text(9, "account_circle");
+      \u0275\u0275elementStart(6, "button", 5)(7, "mat-icon");
+      \u0275\u0275text(8, "account_circle");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(10);
+      \u0275\u0275text(9);
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(11, "mat-menu", null, 0)(13, "button", 7);
-      \u0275\u0275listener("click", function NavigationComponent_Template_button_click_13_listener() {
+      \u0275\u0275elementStart(10, "mat-menu", null, 0)(12, "button", 6);
+      \u0275\u0275listener("click", function NavigationComponent_Template_button_click_12_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.authService.signOut());
       });
-      \u0275\u0275text(14, "Sign Out");
+      \u0275\u0275text(13, "Sign Out");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(15, "mat-sidenav-container", 8)(16, "mat-sidenav", 9, 1);
+      \u0275\u0275elementStart(14, "mat-sidenav-container", 7)(15, "mat-sidenav", 8, 1);
+      \u0275\u0275pipe(17, "async");
       \u0275\u0275pipe(18, "async");
       \u0275\u0275pipe(19, "async");
       \u0275\u0275pipe(20, "async");
-      \u0275\u0275pipe(21, "async");
-      \u0275\u0275elementStart(22, "mat-nav-list", 10)(23, "a", 11)(24, "span", 12);
-      \u0275\u0275element(25, "mat-icon");
+      \u0275\u0275elementStart(21, "mat-nav-list", 9)(22, "a", 10)(23, "span", 11)(24, "mat-icon");
+      \u0275\u0275text(25, "folder");
+      \u0275\u0275elementEnd();
       \u0275\u0275elementStart(26, "span");
       \u0275\u0275text(27, "Projects");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275elementStart(28, "a", 13)(29, "span", 12);
-      \u0275\u0275element(30, "mat-icon");
-      \u0275\u0275elementStart(31, "span");
-      \u0275\u0275text(32, "Issues");
+      \u0275\u0275elementStart(28, "a", 12)(29, "span", 11)(30, "mat-icon");
+      \u0275\u0275text(31, "problem");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(32, "span");
+      \u0275\u0275text(33, "Issues");
       \u0275\u0275elementEnd()()();
-      \u0275\u0275element(33, "mat-divider", 14);
-      \u0275\u0275elementStart(34, "a", 15);
-      \u0275\u0275listener("click", function NavigationComponent_Template_a_click_34_listener() {
+      \u0275\u0275element(34, "mat-divider", 13);
+      \u0275\u0275elementStart(35, "a", 14);
+      \u0275\u0275listener("click", function NavigationComponent_Template_a_click_35_listener() {
         \u0275\u0275restoreView(_r1);
         return \u0275\u0275resetView(ctx.authService.signOut());
       });
-      \u0275\u0275elementStart(35, "span", 12)(36, "mat-icon");
-      \u0275\u0275text(37, "output");
+      \u0275\u0275elementStart(36, "span", 11)(37, "mat-icon");
+      \u0275\u0275text(38, "output");
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(38, "span");
-      \u0275\u0275text(39, "Output");
+      \u0275\u0275elementStart(39, "span");
+      \u0275\u0275text(40, "Output");
       \u0275\u0275elementEnd()()()()();
-      \u0275\u0275template(40, NavigationComponent_Conditional_40_Template, 19, 11, "mat-sidenav", 16);
-      \u0275\u0275pipe(41, "async");
-      \u0275\u0275elementStart(42, "mat-sidenav-content")(43, "main");
-      \u0275\u0275element(44, "router-outlet");
+      \u0275\u0275template(41, NavigationComponent_Conditional_41_Template, 16, 2, "mat-sidenav", 15);
+      \u0275\u0275pipe(42, "async");
+      \u0275\u0275template(43, NavigationComponent_Conditional_43_Template, 16, 0, "nav", 16);
+      \u0275\u0275pipe(44, "async");
+      \u0275\u0275elementStart(45, "mat-sidenav-content")(46, "main");
+      \u0275\u0275element(47, "router-outlet");
       \u0275\u0275elementEnd()()();
     }
     if (rf & 2) {
       let tmp_4_0;
-      const menu_r6 = \u0275\u0275reference(12);
-      const drawer_r3 = \u0275\u0275reference(17);
+      const menu_r7 = \u0275\u0275reference(11);
       \u0275\u0275advance();
-      \u0275\u0275property("ngIf", \u0275\u0275pipeBind1(2, 7, ctx.isHandset$) || \u0275\u0275pipeBind1(3, 9, ctx.isTablet$));
-      \u0275\u0275advance(6);
-      \u0275\u0275property("matMenuTriggerFor", menu_r6);
+      \u0275\u0275property("ngIf", \u0275\u0275pipeBind1(2, 8, ctx.isHandset$) || \u0275\u0275pipeBind1(3, 10, ctx.isTablet$));
+      \u0275\u0275advance(5);
+      \u0275\u0275property("matMenuTriggerFor", menu_r7);
       \u0275\u0275advance(3);
       \u0275\u0275textInterpolate1(" ", (tmp_4_0 = ctx.authService.authData()) == null ? null : tmp_4_0.name, " ");
       \u0275\u0275advance(6);
-      \u0275\u0275property("mode", \u0275\u0275pipeBind1(18, 11, ctx.isHandset$) || \u0275\u0275pipeBind1(19, 13, ctx.isTablet$) ? "over" : "side")("opened", \u0275\u0275pipeBind1(20, 15, ctx.isWeb$));
-      \u0275\u0275attribute("role", \u0275\u0275pipeBind1(21, 17, ctx.isHandset$) ? "dialog" : "navigation");
-      \u0275\u0275advance(24);
-      \u0275\u0275conditional(\u0275\u0275pipeBind1(41, 19, ctx.isTablet$) && drawer_r3.opened === false ? 40 : -1);
+      \u0275\u0275property("mode", \u0275\u0275pipeBind1(17, 12, ctx.isHandset$) || \u0275\u0275pipeBind1(18, 14, ctx.isTablet$) ? "over" : "side")("opened", \u0275\u0275pipeBind1(19, 16, ctx.isWeb$));
+      \u0275\u0275attribute("role", \u0275\u0275pipeBind1(20, 18, ctx.isHandset$) ? "dialog" : "navigation");
+      \u0275\u0275advance(26);
+      \u0275\u0275conditional(\u0275\u0275pipeBind1(42, 20, ctx.isTablet$) ? 41 : -1);
+      \u0275\u0275advance(2);
+      \u0275\u0275conditional(\u0275\u0275pipeBind1(44, 22, ctx.isHandset$) ? 43 : -1);
     }
   }, dependencies: [
     MatToolbarModule,
     MatToolbar,
     MatButtonModule,
+    MatAnchor,
     MatButton,
     MatIconButton,
     MatSidenavModule,
