@@ -1,4 +1,6 @@
-﻿@mixin _private-apply-font($type-scale) {
+﻿@use '../typography';
+
+@mixin _private-apply-font($type-scale) {
   font-size: var(--mat-sys-#{$type-scale}-size);
   font-weight: var(--mat-sys-#{$type-scale}-weight);
   letter-spacing: var(--mat-sys-#{$type-scale}-tracking);
@@ -16,22 +18,22 @@
   $marker-variants: (
       "minor": (
           
-          "background-color": var(--mat-sys-surface-variant),
+          "background-color":  rgb(74, 119, 74),
           "color": var(--mat-sys-on-surface-variant),
       ),
       "normal": (
           
-          "background-color": var(--mat-sys-secondary-container),
+          "background-color": rgb(65, 93, 146),
           "color": var(--mat-sys-on-secondary-container),
       ),
       "major": (
           
-          "background-color": var(--mat-sys-tertiary-container),
+          "background-color": rgb(136, 135, 70),
           "color": var(--mat-sys-on-tertiary-container),
       ),
       "critical": (
           
-          "background-color": var(--mat-sys-error-container),
+          "background-color": rgb(104, 46, 46),
           "color": var(--mat-sys-on-error-container),
       )
   );

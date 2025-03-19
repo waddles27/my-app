@@ -210,25 +210,25 @@ html {
   --mat-icon-color: var(--mat-sys-secondary);
 }
 html .app-issue--minor {
-  --app-issue-marker-background-color: var(--mat-sys-surface-variant);
+  --app-issue-marker-background-color: rgb(74, 119, 74);
 }
 html .app-issue--minor {
   --app-issue-marker-color: var(--mat-sys-on-surface-variant);
 }
 html .app-issue--normal {
-  --app-issue-marker-background-color: var(--mat-sys-secondary-container);
+  --app-issue-marker-background-color: rgb(65, 93, 146);
 }
 html .app-issue--normal {
   --app-issue-marker-color: var(--mat-sys-on-secondary-container);
 }
 html .app-issue--major {
-  --app-issue-marker-background-color: var(--mat-sys-tertiary-container);
+  --app-issue-marker-background-color: rgb(136, 135, 70);
 }
 html .app-issue--major {
   --app-issue-marker-color: var(--mat-sys-on-tertiary-container);
 }
 html .app-issue--critical {
-  --app-issue-marker-background-color: var(--mat-sys-error-container);
+  --app-issue-marker-background-color: rgb(104, 46, 46);
 }
 html .app-issue--critical {
   --app-issue-marker-color: var(--mat-sys-on-error-container);
@@ -299,6 +299,9 @@ html .nav-item {
   align-items: center;
   gap: 16px;
   height: 48px;
+}
+html .mat-sidenav {
+  overflow: hidden !important;
 }
 html .toolbar {
   background-color: var(--mat-sys-surface-container);

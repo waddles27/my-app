@@ -17,6 +17,11 @@
 <div class="container">
 
     <div class="heading">
+        <mat-chip-listbox [value]="selectedState()" (change)="onStateChanged($event)">
+            <mat-chip-option value="Open">Open</mat-chip-option>
+            <mat-chip-option value="Closed">Closed</mat-chip-option>
+        </mat-chip-listbox>
+
         <app-projects-selection (change)="selectedProjectIds.set($event)"></app-projects-selection>
         <app-priorities-selection (change)="selectedPriorities.set($event)"></app-priorities-selection>
         <app-issue-sorting [sort]="dataSource.sortRequest()"
@@ -25,34 +30,34 @@
 
     <div class="content">
         @if (!dataSource.isLoading()) {
-            <mat-action-list>
-                @for (issue of dataSource.data(); track issue.id) {
-                    <div class="element-container element-container_issue">
-                        <button mat-icon-button [matMenuTriggerFor]="menu">
-                            <mat-icon>more_vert</mat-icon>
-                        </button>
-                        <app-issue [issue]="issue"></app-issue>
-                        <button mat-icon-button class="secondary" (click)="closeIssue(issue)"
-                                [matTooltip]="issue.state === 'Open' ? 'Close' : 'Open'">
-                            <mat-icon>{{  issue.state === 'Open' ? 'toggle_off' : 'toggle_on' }}</mat-icon>
-                        </button>
-                    </div>
-
-                    <mat-menu #menu="matMenu">
-                        <button mat-menu-item (click)="editIssue(issue)">
-                            <mat-icon>edit_document</mat-icon>
-                            <span>Edit</span>
-                        </button>
-                        <button mat-menu-item mat-error (click)="deleteIssue(issue.id)">
-                            <mat-icon>delete</mat-icon>
-                            <span>Delete</span>
-                        </button>
-                    </mat-menu>
-                }
-            </mat-action-list>
-
+        <mat-action-list>
+            @for (issue of dataSource.data(); track issue.id) {
+            <div class="element-container element-container_issue">
+                <button mat-icon-button [matMenuTriggerFor]="menu">
+                    <mat-icon>more_vert</mat-icon>
+                </button>
+                <app-issue [issue]="issue"></app-issue>
+                <button mat-icon-button class="secondary" (click)="closeIssue(issue)"
+                 [matTooltip]="issue.state === 'Open' ? 'Close' : 'Open'">
+                    <mat-icon>{{  issue.state === 'Open' ? 'check_box_outline_blank' : 'check_box' }}</mat-icon>
+                </button>
+            </div>
+    
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item (click)="editIssue(issue)">
+                    <mat-icon>edit</mat-icon>
+                    <span>Edit</span>
+                </button>
+                <button mat-menu-item mat-error (click)="deleteIssue(issue.id)">
+                    <mat-icon>delete</mat-icon>
+                    <span>Delete</span>
+                </button>
+            </mat-menu>
+            }
+        </mat-action-list>
+    
         } @else {
-            <mat-progress-bar mode="indeterminate" class="progress"></mat-progress-bar>
+        <mat-progress-bar mode="indeterminate" class="progress"></mat-progress-bar>
         }
     </div>
 </div>

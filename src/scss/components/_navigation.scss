@@ -7,14 +7,15 @@
     .sidenav {
         box-shadow: 2px 2px 8px 0px var(--mat-sys-background);
         width: 200px;
-        padding: 64px 16px;
+        padding: 64px 16px ;
         background-color: var(--mat-sys-surface-container);
     }
 
     .sidenav-rail {
         width: 90px;
 
-        .nav-item, .mat-toolbar {
+        .nav-item,
+        .mat-toolbar {
             justify-content: center;
         }
     }
@@ -34,12 +35,11 @@
     }
 
     .mat-nav-list {
-        
         display: flex;
         flex-direction: column;
         height: 100%;
     }
-
+    
     .mat-nav-list a:last-child {
         margin-top: auto;
     }
@@ -51,6 +51,9 @@
         height: 48px;
     }
 
+    .mat-sidenav {
+        overflow: hidden !important; 
+    }
 
 
     .toolbar {
@@ -64,9 +67,7 @@
         align-items: center;
     }
 
-    .title{
-
-    }
+    .title {}
 
     main {
         padding-inline: 16px;

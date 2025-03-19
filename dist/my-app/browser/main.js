@@ -43890,7 +43890,7 @@ function ProjectsComponent_Conditional_12_For_2_Template(rf, ctx) {
       return \u0275\u0275resetView(ctx_r1.createIssue(project_r4.id));
     });
     \u0275\u0275elementStart(8, "mat-icon");
-    \u0275\u0275text(9, "pest_control");
+    \u0275\u0275text(9, "grading");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(10, "span");
     \u0275\u0275text(11, "Add issue");
@@ -44374,7 +44374,7 @@ var IssueComponent = class _IssueComponent {
       \u0275\u0275pipe(6, "relativeTime");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(7, "div", 3)(8, "span", 4);
-      \u0275\u0275text(9, "\npriority\n");
+      \u0275\u0275text(9, " priority ");
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
@@ -44912,7 +44912,7 @@ var _forTrack05 = ($index, $item) => $item.id;
 function IssuesComponent_Conditional_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 13);
+    \u0275\u0275elementStart(0, "button", 16);
     \u0275\u0275listener("click", function IssuesComponent_Conditional_5_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -44923,15 +44923,15 @@ function IssuesComponent_Conditional_5_Template(rf, ctx) {
     \u0275\u0275elementEnd()();
   }
 }
-function IssuesComponent_Conditional_16_For_2_Template(rf, ctx) {
+function IssuesComponent_Conditional_21_For_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r3 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 14)(1, "button", 15)(2, "mat-icon");
+    \u0275\u0275elementStart(0, "div", 17)(1, "button", 18)(2, "mat-icon");
     \u0275\u0275text(3, "more_vert");
     \u0275\u0275elementEnd()();
-    \u0275\u0275element(4, "app-issue", 16);
-    \u0275\u0275elementStart(5, "button", 17);
-    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_2_Template_button_click_5_listener() {
+    \u0275\u0275element(4, "app-issue", 19);
+    \u0275\u0275elementStart(5, "button", 20);
+    \u0275\u0275listener("click", function IssuesComponent_Conditional_21_For_2_Template_button_click_5_listener() {
       const issue_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.closeIssue(issue_r4));
@@ -44939,20 +44939,20 @@ function IssuesComponent_Conditional_16_For_2_Template(rf, ctx) {
     \u0275\u0275elementStart(6, "mat-icon");
     \u0275\u0275text(7);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(8, "mat-menu", null, 0)(10, "button", 18);
-    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_2_Template_button_click_10_listener() {
+    \u0275\u0275elementStart(8, "mat-menu", null, 0)(10, "button", 21);
+    \u0275\u0275listener("click", function IssuesComponent_Conditional_21_For_2_Template_button_click_10_listener() {
       const issue_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.editIssue(issue_r4));
     });
     \u0275\u0275elementStart(11, "mat-icon");
-    \u0275\u0275text(12, "edit_document");
+    \u0275\u0275text(12, "edit");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(13, "span");
     \u0275\u0275text(14, "Edit");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(15, "button", 19);
-    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_2_Template_button_click_15_listener() {
+    \u0275\u0275elementStart(15, "button", 22);
+    \u0275\u0275listener("click", function IssuesComponent_Conditional_21_For_2_Template_button_click_15_listener() {
       const issue_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.deleteIssue(issue_r4.id));
@@ -44974,13 +44974,13 @@ function IssuesComponent_Conditional_16_For_2_Template(rf, ctx) {
     \u0275\u0275advance();
     \u0275\u0275property("matTooltip", issue_r4.state === "Open" ? "Close" : "Open");
     \u0275\u0275advance(2);
-    \u0275\u0275textInterpolate(issue_r4.state === "Open" ? "toggle_off" : "toggle_on");
+    \u0275\u0275textInterpolate(issue_r4.state === "Open" ? "check_box_outline_blank" : "check_box");
   }
 }
-function IssuesComponent_Conditional_16_Template(rf, ctx) {
+function IssuesComponent_Conditional_21_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-action-list");
-    \u0275\u0275repeaterCreate(1, IssuesComponent_Conditional_16_For_2_Template, 20, 4, null, null, _forTrack05);
+    \u0275\u0275repeaterCreate(1, IssuesComponent_Conditional_21_For_2_Template, 20, 4, null, null, _forTrack05);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -44989,9 +44989,9 @@ function IssuesComponent_Conditional_16_Template(rf, ctx) {
     \u0275\u0275repeater(ctx_r1.dataSource.data());
   }
 }
-function IssuesComponent_Conditional_17_Template(rf, ctx) {
+function IssuesComponent_Conditional_22_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "mat-progress-bar", 12);
+    \u0275\u0275element(0, "mat-progress-bar", 15);
   }
 }
 var IssuesComponent = class _IssuesComponent {
@@ -45094,7 +45094,7 @@ var IssuesComponent = class _IssuesComponent {
   static \u0275fac = function IssuesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _IssuesComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _IssuesComponent, selectors: [["app-issues"]], hostAttrs: [1, "app-layout"], decls: 18, vars: 4, consts: [["menu", "matMenu"], [1, "layout-head"], ["subscriptSizing", "dynamic", 1, "search"], ["matIconPrefix", "", 1, "search__prefix"], ["matInput", "", "placeholder", "Search", 3, "formControl"], ["matSuffix", "", "mat-icon-button", "", 1, "search__suffix"], ["mat-flat-button", "", 1, "mat-flat-button", 3, "click"], [1, "container"], [1, "heading"], [3, "change"], [3, "change", "sort"], [1, "content"], ["mode", "indeterminate", 1, "progress"], ["matSuffix", "", "mat-icon-button", "", 1, "search__suffix", 3, "click"], [1, "element-container", "element-container_issue"], ["mat-icon-button", "", 3, "matMenuTriggerFor"], [3, "issue"], ["mat-icon-button", "", 1, "secondary", 3, "click", "matTooltip"], ["mat-menu-item", "", 3, "click"], ["mat-menu-item", "", "mat-error", "", 3, "click"]], template: function IssuesComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _IssuesComponent, selectors: [["app-issues"]], hostAttrs: [1, "app-layout"], decls: 23, vars: 5, consts: [["menu", "matMenu"], [1, "layout-head"], ["subscriptSizing", "dynamic", 1, "search"], ["matIconPrefix", "", 1, "search__prefix"], ["matInput", "", "placeholder", "Search", 3, "formControl"], ["matSuffix", "", "mat-icon-button", "", 1, "search__suffix"], ["mat-flat-button", "", 1, "mat-flat-button", 3, "click"], [1, "container"], [1, "heading"], [3, "change", "value"], ["value", "Open"], ["value", "Closed"], [3, "change"], [3, "change", "sort"], [1, "content"], ["mode", "indeterminate", 1, "progress"], ["matSuffix", "", "mat-icon-button", "", 1, "search__suffix", 3, "click"], [1, "element-container", "element-container_issue"], ["mat-icon-button", "", 3, "matMenuTriggerFor"], [3, "issue"], ["mat-icon-button", "", 1, "secondary", 3, "click", "matTooltip"], ["mat-menu-item", "", 3, "click"], ["mat-menu-item", "", "mat-error", "", 3, "click"]], template: function IssuesComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 1)(1, "mat-form-field", 2)(2, "mat-icon", 3);
       \u0275\u0275text(3, "search");
@@ -45111,23 +45111,33 @@ var IssuesComponent = class _IssuesComponent {
       \u0275\u0275elementEnd();
       \u0275\u0275text(9, " Add ");
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(10, "div", 7)(11, "div", 8)(12, "app-projects-selection", 9);
-      \u0275\u0275listener("change", function IssuesComponent_Template_app_projects_selection_change_12_listener($event) {
+      \u0275\u0275elementStart(10, "div", 7)(11, "div", 8)(12, "mat-chip-listbox", 9);
+      \u0275\u0275listener("change", function IssuesComponent_Template_mat_chip_listbox_change_12_listener($event) {
+        return ctx.onStateChanged($event);
+      });
+      \u0275\u0275elementStart(13, "mat-chip-option", 10);
+      \u0275\u0275text(14, "Open");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "mat-chip-option", 11);
+      \u0275\u0275text(16, "Closed");
+      \u0275\u0275elementEnd()();
+      \u0275\u0275elementStart(17, "app-projects-selection", 12);
+      \u0275\u0275listener("change", function IssuesComponent_Template_app_projects_selection_change_17_listener($event) {
         return ctx.selectedProjectIds.set($event);
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(13, "app-priorities-selection", 9);
-      \u0275\u0275listener("change", function IssuesComponent_Template_app_priorities_selection_change_13_listener($event) {
+      \u0275\u0275elementStart(18, "app-priorities-selection", 12);
+      \u0275\u0275listener("change", function IssuesComponent_Template_app_priorities_selection_change_18_listener($event) {
         return ctx.selectedPriorities.set($event);
       });
       \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(14, "app-issue-sorting", 10);
-      \u0275\u0275listener("change", function IssuesComponent_Template_app_issue_sorting_change_14_listener($event) {
+      \u0275\u0275elementStart(19, "app-issue-sorting", 13);
+      \u0275\u0275listener("change", function IssuesComponent_Template_app_issue_sorting_change_19_listener($event) {
         return ctx.dataSource.changeSort($event);
       });
       \u0275\u0275elementEnd()();
-      \u0275\u0275elementStart(15, "div", 11);
-      \u0275\u0275template(16, IssuesComponent_Conditional_16_Template, 3, 0, "mat-action-list")(17, IssuesComponent_Conditional_17_Template, 1, 0, "mat-progress-bar", 12);
+      \u0275\u0275elementStart(20, "div", 14);
+      \u0275\u0275template(21, IssuesComponent_Conditional_21_Template, 3, 0, "mat-action-list")(22, IssuesComponent_Conditional_22_Template, 1, 0, "mat-progress-bar", 15);
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
@@ -45135,10 +45145,12 @@ var IssuesComponent = class _IssuesComponent {
       \u0275\u0275property("formControl", ctx.searchControl);
       \u0275\u0275advance();
       \u0275\u0275conditional(ctx.searchControl.value ? 5 : -1);
-      \u0275\u0275advance(9);
+      \u0275\u0275advance(7);
+      \u0275\u0275property("value", ctx.selectedState());
+      \u0275\u0275advance(7);
       \u0275\u0275property("sort", ctx.dataSource.sortRequest());
       \u0275\u0275advance(2);
-      \u0275\u0275conditional(!ctx.dataSource.isLoading() ? 16 : 17);
+      \u0275\u0275conditional(!ctx.dataSource.isLoading() ? 21 : 22);
     }
   }, dependencies: [
     IssueComponent,
@@ -45147,6 +45159,8 @@ var IssuesComponent = class _IssuesComponent {
     MatProgressBarModule,
     MatProgressBar,
     MatChipsModule,
+    MatChipListbox,
+    MatChipOption,
     MatButtonModule,
     MatButton,
     MatIconButton,
