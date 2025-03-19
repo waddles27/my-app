@@ -1,4 +1,9 @@
-﻿@use '../typography';
+﻿@mixin _private-apply-font($type-scale) {
+  font-size: var(--mat-sys-#{$type-scale}-size);
+  font-weight: var(--mat-sys-#{$type-scale}-weight);
+  letter-spacing: var(--mat-sys-#{$type-scale}-tracking);
+  line-height: var(--mat-sys-#{$type-scale}-line-height);
+}
 
 @mixin _set-token($prefix, $component, $token, $value) {
   & {
@@ -8,26 +13,25 @@
 
 @mixin component($component-prefix) {
   $component-name: 'issue';
-  $component-name-project: 'project';
   $marker-variants: (
       "minor": (
-
-          "background-color": rgb(142, 205, 142),
+          
+          "background-color": var(--mat-sys-surface-variant),
           "color": var(--mat-sys-on-surface-variant),
       ),
       "normal": (
-
-          "background-color": rgb(41, 137, 227),
+          
+          "background-color": var(--mat-sys-secondary-container),
           "color": var(--mat-sys-on-secondary-container),
       ),
       "major": (
-
-          "background-color": rgb(214, 179, 114),
+          
+          "background-color": var(--mat-sys-tertiary-container),
           "color": var(--mat-sys-on-tertiary-container),
       ),
       "critical": (
-
-          "background-color": rgb(234, 78, 78),
+          
+          "background-color": var(--mat-sys-error-container),
           "color": var(--mat-sys-on-error-container),
       )
   );
@@ -40,20 +44,17 @@
               }
           }
       }
-  }
 
-  .#{$component-prefix}-#{$component-name},
-  .#{$component-prefix}-#{$component-name-project} {
-    &__project-code {
-      @include typography.typography-title-medium();;
-    }
+      &__project-code {
+          @include _private-apply-font(title-small);
+      }
 
-    &__name {
-      @include typography.typography-title-medium();
-    }
+      &__name {
+          @include _private-apply-font(body-large);
+      }
 
-    &__created-on {
-      @include typography.typography-body-medium();
-    }
+      &__created-on {
+          @include _private-apply-font(body-medium);
+      }
   }
 }

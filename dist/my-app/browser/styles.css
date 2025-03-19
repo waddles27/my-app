@@ -210,45 +210,42 @@ html {
   --mat-icon-color: var(--mat-sys-secondary);
 }
 html .app-issue--minor {
-  --app-issue-marker-background-color: rgb(142, 205, 142);
+  --app-issue-marker-background-color: var(--mat-sys-surface-variant);
 }
 html .app-issue--minor {
   --app-issue-marker-color: var(--mat-sys-on-surface-variant);
 }
 html .app-issue--normal {
-  --app-issue-marker-background-color: rgb(41, 137, 227);
+  --app-issue-marker-background-color: var(--mat-sys-secondary-container);
 }
 html .app-issue--normal {
   --app-issue-marker-color: var(--mat-sys-on-secondary-container);
 }
 html .app-issue--major {
-  --app-issue-marker-background-color: rgb(214, 179, 114);
+  --app-issue-marker-background-color: var(--mat-sys-tertiary-container);
 }
 html .app-issue--major {
   --app-issue-marker-color: var(--mat-sys-on-tertiary-container);
 }
 html .app-issue--critical {
-  --app-issue-marker-background-color: rgb(234, 78, 78);
+  --app-issue-marker-background-color: var(--mat-sys-error-container);
 }
 html .app-issue--critical {
   --app-issue-marker-color: var(--mat-sys-on-error-container);
 }
-html .app-issue__project-code,
-html .app-project__project-code {
-  font-size: var(--mat-sys-title-medium-size);
-  font-weight: var(--mat-sys-title-medium-weight);
-  letter-spacing: var(--mat-sys-title-medium-tracking);
-  line-height: var(--mat-sys-title-medium-line-height);
+html .app-issue__project-code {
+  font-size: var(--mat-sys-title-small-size);
+  font-weight: var(--mat-sys-title-small-weight);
+  letter-spacing: var(--mat-sys-title-small-tracking);
+  line-height: var(--mat-sys-title-small-line-height);
 }
-html .app-issue__name,
-html .app-project__name {
-  font-size: var(--mat-sys-title-medium-size);
-  font-weight: var(--mat-sys-title-medium-weight);
-  letter-spacing: var(--mat-sys-title-medium-tracking);
-  line-height: var(--mat-sys-title-medium-line-height);
+html .app-issue__name {
+  font-size: var(--mat-sys-body-large-size);
+  font-weight: var(--mat-sys-body-large-weight);
+  letter-spacing: var(--mat-sys-body-large-tracking);
+  line-height: var(--mat-sys-body-large-line-height);
 }
-html .app-issue__created-on,
-html .app-project__created-on {
+html .app-issue__created-on {
   font-size: var(--mat-sys-body-medium-size);
   font-weight: var(--mat-sys-body-medium-weight);
   letter-spacing: var(--mat-sys-body-medium-tracking);
@@ -290,7 +287,6 @@ html .mat-divider {
   margin: 0 16px;
 }
 html .mat-nav-list {
-  gap: 8px;
   display: flex;
   flex-direction: column;
   height: 100%;

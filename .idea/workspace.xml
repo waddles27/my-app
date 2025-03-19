@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="14d4647d-a06f-48e5-ad06-4bbda13034c6" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.angular/cache/19.0.4/my-app/.tsbuildinfo" beforeDir="false" afterPath="$PROJECT_DIR$/.angular/cache/19.0.4/my-app/.tsbuildinfo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/my-app/browser/auth.component.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/my-app/browser/auth.component.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/my-app/browser/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/my-app/browser/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/my-app/browser/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/my-app/browser/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/my-app/browser/main.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/my-app/browser/main.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/my-app/browser/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/my-app/browser/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/my-app/browser/styles.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/my-app/browser/styles.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/dialogs/edit-project/edit-project.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/dialogs/edit-project/edit-project.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/dialogs/issue-create/issue-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/dialogs/issue-create/issue-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/components/dialogs/project-create/project-create.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/dialogs/project-create/project-create.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/auth/auth.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/auth/auth.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/auth/auth.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/auth/auth.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/issues/issues.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/issues/issues.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/issues/issues.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/issues/issues.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/layout/projects/projects.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout/projects/projects.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/navigation/navigation.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/navigation/navigation.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_issue.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_issue.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/scss/components/_navigation.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/scss/components/_navigation.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,6 +31,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -77,6 +59,8 @@
       <workItem from="1742324570182" duration="1660000" />
       <workItem from="1742362010853" duration="10401000" />
       <workItem from="1742379483403" duration="3599000" />
+      <workItem from="1742385649576" duration="294000" />
+      <workItem from="1742387366379" duration="1892000" />
     </task>
     <servers />
   </component>

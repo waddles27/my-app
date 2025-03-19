@@ -53,7 +53,7 @@ export class IssuesComponent {
 
     public readonly dataSource = new IssueDataSource();
     private readonly _issueService = inject(IssueService);
-
+   
     public readonly searchControl = new FormControl<string>(this.dataSource.filterRequest().searchTerm ?? '');
     public readonly selectedState = signal<IssueState>(this.dataSource.filterRequest().state ?? "Open");
     public readonly selectedProjectIds = signal<string[]>(this.dataSource.filterRequest().projectIds ?? []);
@@ -155,6 +155,6 @@ export class IssuesComponent {
 
         this._issueService.editIssue(this.request, issue.id).subscribe({
             next: data => this.dataSource.reload()
-        });
-    }
+        });  
+    }   
 }
