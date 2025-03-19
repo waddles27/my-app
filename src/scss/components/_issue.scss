@@ -11,18 +11,22 @@
   $component-name-project: 'project';
   $marker-variants: (
       "minor": (
+
           "background-color": rgb(142, 205, 142),
           "color": var(--mat-sys-on-surface-variant),
       ),
       "normal": (
+
           "background-color": rgb(41, 137, 227),
           "color": var(--mat-sys-on-secondary-container),
       ),
       "major": (
+
           "background-color": rgb(214, 179, 114),
           "color": var(--mat-sys-on-tertiary-container),
       ),
       "critical": (
+
           "background-color": rgb(234, 78, 78),
           "color": var(--mat-sys-on-error-container),
       )
@@ -38,7 +42,7 @@
       }
   }
 
-  .#{$component-prefix}-#{$component-name}, 
+  .#{$component-prefix}-#{$component-name},
   .#{$component-prefix}-#{$component-name-project} {
     &__project-code {
       @include typography.typography-title-medium();;

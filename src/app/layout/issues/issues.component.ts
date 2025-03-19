@@ -121,20 +121,15 @@ export class IssuesComponent {
     }
 
     public closeIssue(issue: IIssueListResponse) {
-        console.log('До изменения:', issue.state);
-        issue.state = issue.state === 'Open' ? 'Closed' : 'Open';
-        console.log('После изменения:', issue.state);
-        this.editIssueForClose(issue, issue.state === 'Open' ? 0 : 1);
+
+        if (issue.state == 'Closed') {
+            this.editIssueForClose(issue, 0);
+        }
+        else {
+            issue.state = "Open";
+            this.editIssueForClose(issue, 1);
+        }
     }
-
-    public readonly openIssues = computed(() => {
-        return this.dataSource.data().filter(issue => issue.state === 'Open');
-    });
-
-
-    public readonly closedIssues = computed(() => {
-        return this.dataSource.data().filter(issue => issue.state === 'Closed');
-    });
 
     public editIssueForClose(issue: IIssueListResponse, state: number) {
         this.request.name = issue.name;
@@ -159,9 +154,7 @@ export class IssuesComponent {
         this.request.state = state;
 
         this._issueService.editIssue(this.request, issue.id).subscribe({
-            next: data =>{
-                this.dataSource.changeFilter(this.filterRequest());
-                this.dataSource.reload()}
+            next: data => this.dataSource.reload()
         });
     }
 }

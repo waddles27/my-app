@@ -35,7 +35,13 @@
 
     .mat-nav-list {
         gap: 8px;
-        display: grid;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .mat-nav-list a:last-child {
+        margin-top: auto;
     }
 
     .nav-item {
@@ -44,6 +50,8 @@
         gap: 16px;
         height: 48px;
     }
+
+
 
     .toolbar {
         background-color: var(--mat-sys-surface-container);

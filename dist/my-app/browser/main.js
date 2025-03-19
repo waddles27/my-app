@@ -41876,7 +41876,7 @@ var IssueCreateComponent = class _IssueCreateComponent {
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _IssueCreateComponent, selectors: [["app-issue-create"]], decls: 31, vars: 3, consts: [["mat-dialog-title", ""], [1, "content"], [1, "issue-create-form", 3, "ngSubmit", "formGroup"], [1, "form__project"], ["formControlName", "projectId"], [3, "value"], [1, "form__priority"], ["formControlName", "priority"], [1, "form__name"], ["matInput", "", "formControlName", "name"], [1, "form__description"], ["matInput", "", "formControlName", "description"], ["mat-button", "", 3, "click"], ["mat-flat-button", "", 3, "click", "disabled"]], template: function IssueCreateComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "h2", 0);
-      \u0275\u0275text(1, "New issue");
+      \u0275\u0275text(1, "Add");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(2, "mat-dialog-content")(3, "div", 1)(4, "form", 2);
       \u0275\u0275listener("ngSubmit", function IssueCreateComponent_Template_form_ngSubmit_4_listener() {
@@ -41937,6 +41937,24 @@ var IssueCreateComponent = class _IssueCreateComponent {
 })();
 
 // src/app/components/dialogs/edit-project/edit-project.component.ts
+function EditProjectComponent_Conditional_9_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "mat-error");
+    \u0275\u0275text(1, "Email is ");
+    \u0275\u0275elementStart(2, "strong");
+    \u0275\u0275text(3, "required");
+    \u0275\u0275elementEnd()();
+  }
+}
+function EditProjectComponent_Conditional_14_Template(rf, ctx) {
+  if (rf & 1) {
+    \u0275\u0275elementStart(0, "mat-error");
+    \u0275\u0275text(1, "Name is ");
+    \u0275\u0275elementStart(2, "strong");
+    \u0275\u0275text(3, "required");
+    \u0275\u0275elementEnd()();
+  }
+}
 var EditProjectComponent = class _EditProjectComponent {
   data;
   _dialogRef = inject(MatDialogRef);
@@ -41967,11 +41985,71 @@ var EditProjectComponent = class _EditProjectComponent {
   static \u0275fac = function EditProjectComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _EditProjectComponent)(\u0275\u0275directiveInject(MAT_DIALOG_DATA));
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _EditProjectComponent, selectors: [["app-edit-project"]], decls: 0, vars: 0, template: function EditProjectComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _EditProjectComponent, selectors: [["app-edit-project"]], decls: 24, vars: 4, consts: [["mat-dialog-title", ""], [1, "content"], [3, "ngSubmit", "formGroup"], ["matInput", "", "formControlName", "code", "cdkFocusInitial", ""], ["matInput", "", "formControlName", "name"], ["matInput", "", "formControlName", "description"], ["mat-button", "", "mat-dialog-close", ""], ["mat-button", "", 3, "click", "disabled"]], template: function EditProjectComponent_Template(rf, ctx) {
+    if (rf & 1) {
+      \u0275\u0275elementStart(0, "h2", 0);
+      \u0275\u0275text(1, "Edit Project");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(2, "mat-dialog-content")(3, "div", 1)(4, "form", 2);
+      \u0275\u0275listener("ngSubmit", function EditProjectComponent_Template_form_ngSubmit_4_listener() {
+        return ctx.onEdit();
+      });
+      \u0275\u0275elementStart(5, "mat-form-field")(6, "mat-label");
+      \u0275\u0275text(7, "Code");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(8, "input", 3);
+      \u0275\u0275template(9, EditProjectComponent_Conditional_9_Template, 4, 0, "mat-error");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(10, "mat-form-field")(11, "mat-label");
+      \u0275\u0275text(12, "Name");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(13, "input", 4);
+      \u0275\u0275template(14, EditProjectComponent_Conditional_14_Template, 4, 0, "mat-error");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(15, "mat-form-field")(16, "mat-label");
+      \u0275\u0275text(17, "Description");
+      \u0275\u0275elementEnd();
+      \u0275\u0275element(18, "input", 5);
+      \u0275\u0275elementEnd()()()();
+      \u0275\u0275elementStart(19, "mat-dialog-actions")(20, "button", 6);
+      \u0275\u0275text(21, "Cancel");
+      \u0275\u0275elementEnd();
+      \u0275\u0275elementStart(22, "button", 7);
+      \u0275\u0275listener("click", function EditProjectComponent_Template_button_click_22_listener() {
+        return ctx.onEdit();
+      });
+      \u0275\u0275text(23, "Edit");
+      \u0275\u0275elementEnd()();
+    }
+    if (rf & 2) {
+      \u0275\u0275advance(4);
+      \u0275\u0275property("formGroup", ctx.editForm);
+      \u0275\u0275advance(5);
+      \u0275\u0275conditional(ctx.code.hasError("required") ? 9 : -1);
+      \u0275\u0275advance(5);
+      \u0275\u0275conditional(ctx.name.hasError("required") ? 14 : -1);
+      \u0275\u0275advance(8);
+      \u0275\u0275property("disabled", ctx.isInvalidState());
+    }
   }, dependencies: [
     MatDialogModule,
+    MatDialogClose,
+    MatDialogTitle,
+    MatDialogActions,
+    MatDialogContent,
+    MatButton,
     ReactiveFormsModule,
-    MatInputModule
+    \u0275NgNoValidate,
+    DefaultValueAccessor,
+    NgControlStatus,
+    NgControlStatusGroup,
+    FormGroupDirective,
+    FormControlName,
+    MatInputModule,
+    MatInput,
+    MatFormField,
+    MatLabel,
+    MatError
   ], encapsulation: 2 });
 };
 (() => {
@@ -42031,7 +42109,7 @@ var ProjectCreateComponent = class _ProjectCreateComponent {
   static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _ProjectCreateComponent, selectors: [["app-project-create"]], decls: 20, vars: 4, consts: [["mat-dialog-title", ""], [1, "content"], [1, "form", 3, "ngSubmit", "formGroup"], [1, "form__name"], ["matInput", "", "formControlName", "code"], ["matInput", "", "formControlName", "name"], ["mat-button", "", 3, "click"], ["mat-flat-button", "", 3, "click", "disabled"]], template: function ProjectCreateComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "h2", 0);
-      \u0275\u0275text(1, "New project");
+      \u0275\u0275text(1, "Add");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(2, "mat-dialog-content")(3, "div", 1)(4, "form", 2);
       \u0275\u0275listener("ngSubmit", function ProjectCreateComponent_Template_form_ngSubmit_4_listener() {
@@ -43817,17 +43895,29 @@ function ProjectsComponent_Conditional_12_For_2_Template(rf, ctx) {
     \u0275\u0275elementStart(10, "span");
     \u0275\u0275text(11, "Add issue");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(12, "button", 15);
+    \u0275\u0275elementStart(12, "button", 14);
     \u0275\u0275listener("click", function ProjectsComponent_Conditional_12_For_2_Template_button_click_12_listener() {
+      const project_r4 = \u0275\u0275restoreView(_r3).$implicit;
+      const ctx_r1 = \u0275\u0275nextContext(2);
+      return \u0275\u0275resetView(ctx_r1.editProject(project_r4));
+    });
+    \u0275\u0275elementStart(13, "mat-icon");
+    \u0275\u0275text(14, "edit_document");
+    \u0275\u0275elementEnd();
+    \u0275\u0275elementStart(15, "span");
+    \u0275\u0275text(16, "Edit");
+    \u0275\u0275elementEnd()();
+    \u0275\u0275elementStart(17, "button", 15);
+    \u0275\u0275listener("click", function ProjectsComponent_Conditional_12_For_2_Template_button_click_17_listener() {
       const project_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.deleteProject(project_r4.id));
     });
-    \u0275\u0275elementStart(13, "mat-icon");
-    \u0275\u0275text(14, "delete");
+    \u0275\u0275elementStart(18, "mat-icon");
+    \u0275\u0275text(19, "delete");
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(15, "span");
-    \u0275\u0275text(16, "Delete");
+    \u0275\u0275elementStart(20, "span");
+    \u0275\u0275text(21, "Delete");
     \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
@@ -43842,7 +43932,7 @@ function ProjectsComponent_Conditional_12_For_2_Template(rf, ctx) {
 function ProjectsComponent_Conditional_12_Template(rf, ctx) {
   if (rf & 1) {
     \u0275\u0275elementStart(0, "mat-action-list");
-    \u0275\u0275repeaterCreate(1, ProjectsComponent_Conditional_12_For_2_Template, 17, 2, null, null, _forTrack02);
+    \u0275\u0275repeaterCreate(1, ProjectsComponent_Conditional_12_For_2_Template, 22, 2, null, null, _forTrack02);
     \u0275\u0275elementEnd();
   }
   if (rf & 2) {
@@ -43929,9 +44019,9 @@ var ProjectsComponent = class _ProjectsComponent {
         return ctx.createProject();
       });
       \u0275\u0275elementStart(7, "mat-icon");
-      \u0275\u0275text(8, "note_add");
+      \u0275\u0275text(8, "add");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(9, " New Project ");
+      \u0275\u0275text(9, " Add ");
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(10, "div", 7)(11, "div", 8);
       \u0275\u0275template(12, ProjectsComponent_Conditional_12_Template, 3, 0, "mat-action-list")(13, ProjectsComponent_Conditional_13_Template, 1, 0, "mat-progress-bar", 9);
@@ -44271,7 +44361,7 @@ var IssueComponent = class _IssueComponent {
     if (rf & 2) {
       \u0275\u0275classMap(ctx.class);
     }
-  }, inputs: { issue: [1, "issue"] }, features: [\u0275\u0275HostDirectivesFeature([MatRipple])], decls: 8, vars: 6, consts: [[1, "app-issue__project-code"], [1, "app-issue__name"], [1, "app-issue__created-on"], [1, "app-issue__priority", 3, "matTooltip"]], template: function IssueComponent_Template(rf, ctx) {
+  }, inputs: { issue: [1, "issue"] }, features: [\u0275\u0275HostDirectivesFeature([MatRipple])], decls: 10, vars: 6, consts: [[1, "app-issue__project-code"], [1, "app-issue__name"], [1, "app-issue__created-on"], [1, "app-issue__priority", 3, "matTooltip"], [1, "material-symbols-outlined"]], template: function IssueComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 0);
       \u0275\u0275text(1);
@@ -44283,7 +44373,9 @@ var IssueComponent = class _IssueComponent {
       \u0275\u0275text(5);
       \u0275\u0275pipe(6, "relativeTime");
       \u0275\u0275elementEnd();
-      \u0275\u0275element(7, "div", 3);
+      \u0275\u0275elementStart(7, "div", 3)(8, "span", 4);
+      \u0275\u0275text(9, "\npriority\n");
+      \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
       \u0275\u0275advance();
@@ -44820,7 +44912,7 @@ var _forTrack05 = ($index, $item) => $item.id;
 function IssuesComponent_Conditional_5_Template(rf, ctx) {
   if (rf & 1) {
     const _r1 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "button", 14);
+    \u0275\u0275elementStart(0, "button", 13);
     \u0275\u0275listener("click", function IssuesComponent_Conditional_5_Template_button_click_0_listener() {
       \u0275\u0275restoreView(_r1);
       const ctx_r1 = \u0275\u0275nextContext();
@@ -44831,36 +44923,36 @@ function IssuesComponent_Conditional_5_Template(rf, ctx) {
     \u0275\u0275elementEnd()();
   }
 }
-function IssuesComponent_Conditional_16_For_6_Template(rf, ctx) {
+function IssuesComponent_Conditional_16_For_2_Template(rf, ctx) {
   if (rf & 1) {
     const _r3 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 17)(1, "button", 18)(2, "mat-icon");
+    \u0275\u0275elementStart(0, "div", 14)(1, "button", 15)(2, "mat-icon");
     \u0275\u0275text(3, "more_vert");
     \u0275\u0275elementEnd()();
-    \u0275\u0275element(4, "app-issue", 19);
-    \u0275\u0275elementStart(5, "button", 20);
-    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_6_Template_button_click_5_listener() {
+    \u0275\u0275element(4, "app-issue", 16);
+    \u0275\u0275elementStart(5, "button", 17);
+    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_2_Template_button_click_5_listener() {
       const issue_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.closeIssue(issue_r4));
     });
     \u0275\u0275elementStart(6, "mat-icon");
-    \u0275\u0275text(7, "toggle_off");
+    \u0275\u0275text(7);
     \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(8, "mat-menu", null, 0)(10, "button", 21);
-    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_6_Template_button_click_10_listener() {
+    \u0275\u0275elementStart(8, "mat-menu", null, 0)(10, "button", 18);
+    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_2_Template_button_click_10_listener() {
       const issue_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.editIssue(issue_r4));
     });
     \u0275\u0275elementStart(11, "mat-icon");
-    \u0275\u0275text(12, "edit");
+    \u0275\u0275text(12, "edit_document");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(13, "span");
     \u0275\u0275text(14, "Edit");
     \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(15, "button", 22);
-    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_6_Template_button_click_15_listener() {
+    \u0275\u0275elementStart(15, "button", 19);
+    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_2_Template_button_click_15_listener() {
       const issue_r4 = \u0275\u0275restoreView(_r3).$implicit;
       const ctx_r1 = \u0275\u0275nextContext(2);
       return \u0275\u0275resetView(ctx_r1.deleteIssue(issue_r4.id));
@@ -44879,84 +44971,27 @@ function IssuesComponent_Conditional_16_For_6_Template(rf, ctx) {
     \u0275\u0275property("matMenuTriggerFor", menu_r5);
     \u0275\u0275advance(3);
     \u0275\u0275property("issue", issue_r4);
-  }
-}
-function IssuesComponent_Conditional_16_For_12_Template(rf, ctx) {
-  if (rf & 1) {
-    const _r6 = \u0275\u0275getCurrentView();
-    \u0275\u0275elementStart(0, "div", 17)(1, "button", 18)(2, "mat-icon");
-    \u0275\u0275text(3, "more_vert");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275element(4, "app-issue", 19);
-    \u0275\u0275elementStart(5, "button", 23);
-    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_12_Template_button_click_5_listener() {
-      const issue_r7 = \u0275\u0275restoreView(_r6).$implicit;
-      const ctx_r1 = \u0275\u0275nextContext(2);
-      return \u0275\u0275resetView(ctx_r1.closeIssue(issue_r7));
-    });
-    \u0275\u0275elementStart(6, "mat-icon");
-    \u0275\u0275text(7, "toggle_on");
-    \u0275\u0275elementEnd()()();
-    \u0275\u0275elementStart(8, "mat-menu", null, 0)(10, "button", 21);
-    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_12_Template_button_click_10_listener() {
-      const issue_r7 = \u0275\u0275restoreView(_r6).$implicit;
-      const ctx_r1 = \u0275\u0275nextContext(2);
-      return \u0275\u0275resetView(ctx_r1.editIssue(issue_r7));
-    });
-    \u0275\u0275elementStart(11, "mat-icon");
-    \u0275\u0275text(12, "edit");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(13, "span");
-    \u0275\u0275text(14, "Edit");
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(15, "button", 22);
-    \u0275\u0275listener("click", function IssuesComponent_Conditional_16_For_12_Template_button_click_15_listener() {
-      const issue_r7 = \u0275\u0275restoreView(_r6).$implicit;
-      const ctx_r1 = \u0275\u0275nextContext(2);
-      return \u0275\u0275resetView(ctx_r1.deleteIssue(issue_r7.id));
-    });
-    \u0275\u0275elementStart(16, "mat-icon");
-    \u0275\u0275text(17, "delete");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(18, "span");
-    \u0275\u0275text(19, "Delete");
-    \u0275\u0275elementEnd()()();
-  }
-  if (rf & 2) {
-    const issue_r7 = ctx.$implicit;
-    const menu_r8 = \u0275\u0275reference(9);
     \u0275\u0275advance();
-    \u0275\u0275property("matMenuTriggerFor", menu_r8);
-    \u0275\u0275advance(3);
-    \u0275\u0275property("issue", issue_r7);
+    \u0275\u0275property("matTooltip", issue_r4.state === "Open" ? "Close" : "Open");
+    \u0275\u0275advance(2);
+    \u0275\u0275textInterpolate(issue_r4.state === "Open" ? "toggle_off" : "toggle_on");
   }
 }
 function IssuesComponent_Conditional_16_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275elementStart(0, "div", 12)(1, "div", 15)(2, "h2");
-    \u0275\u0275text(3, "Open Issues");
+    \u0275\u0275elementStart(0, "mat-action-list");
+    \u0275\u0275repeaterCreate(1, IssuesComponent_Conditional_16_For_2_Template, 20, 4, null, null, _forTrack05);
     \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(4, "mat-action-list");
-    \u0275\u0275repeaterCreate(5, IssuesComponent_Conditional_16_For_6_Template, 20, 2, null, null, _forTrack05);
-    \u0275\u0275elementEnd()();
-    \u0275\u0275elementStart(7, "div", 16)(8, "h2");
-    \u0275\u0275text(9, "Closed Issues");
-    \u0275\u0275elementEnd();
-    \u0275\u0275elementStart(10, "mat-action-list");
-    \u0275\u0275repeaterCreate(11, IssuesComponent_Conditional_16_For_12_Template, 20, 2, null, null, _forTrack05);
-    \u0275\u0275elementEnd()()();
   }
   if (rf & 2) {
     const ctx_r1 = \u0275\u0275nextContext();
-    \u0275\u0275advance(5);
-    \u0275\u0275repeater(ctx_r1.openIssues());
-    \u0275\u0275advance(6);
-    \u0275\u0275repeater(ctx_r1.closedIssues());
+    \u0275\u0275advance();
+    \u0275\u0275repeater(ctx_r1.dataSource.data());
   }
 }
 function IssuesComponent_Conditional_17_Template(rf, ctx) {
   if (rf & 1) {
-    \u0275\u0275element(0, "mat-progress-bar", 13);
+    \u0275\u0275element(0, "mat-progress-bar", 12);
   }
 }
 var IssuesComponent = class _IssuesComponent {
@@ -45025,17 +45060,13 @@ var IssuesComponent = class _IssuesComponent {
     });
   }
   closeIssue(issue) {
-    console.log("\u0414\u043E \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F:", issue.state);
-    issue.state = issue.state === "Open" ? "Closed" : "Open";
-    console.log("\u041F\u043E\u0441\u043B\u0435 \u0438\u0437\u043C\u0435\u043D\u0435\u043D\u0438\u044F:", issue.state);
-    this.editIssueForClose(issue, issue.state === "Open" ? 0 : 1);
+    if (issue.state == "Closed") {
+      this.editIssueForClose(issue, 0);
+    } else {
+      issue.state = "Open";
+      this.editIssueForClose(issue, 1);
+    }
   }
-  openIssues = computed(() => {
-    return this.dataSource.data().filter((issue) => issue.state === "Open");
-  });
-  closedIssues = computed(() => {
-    return this.dataSource.data().filter((issue) => issue.state === "Closed");
-  });
   editIssueForClose(issue, state2) {
     this.request.name = issue.name;
     switch (issue.priority) {
@@ -45057,16 +45088,13 @@ var IssuesComponent = class _IssuesComponent {
     }
     this.request.state = state2;
     this._issueService.editIssue(this.request, issue.id).subscribe({
-      next: (data) => {
-        this.dataSource.changeFilter(this.filterRequest());
-        this.dataSource.reload();
-      }
+      next: (data) => this.dataSource.reload()
     });
   }
   static \u0275fac = function IssuesComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _IssuesComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _IssuesComponent, selectors: [["app-issues"]], hostAttrs: [1, "app-layout"], decls: 18, vars: 4, consts: [["menu", "matMenu"], [1, "layout-head"], ["subscriptSizing", "dynamic", 1, "search"], ["matIconPrefix", "", 1, "search__prefix"], ["matInput", "", "placeholder", "Search", 3, "formControl"], ["matSuffix", "", "mat-icon-button", "", 1, "search__suffix"], ["mat-flat-button", "", 1, "mat-flat-button", 3, "click"], [1, "container"], [1, "heading"], [3, "change"], [3, "change", "sort"], [1, "content"], [1, "issues-container"], ["mode", "indeterminate", 1, "progress"], ["matSuffix", "", "mat-icon-button", "", 1, "search__suffix", 3, "click"], [1, "open-issues"], [1, "closed-issues"], [1, "element-container", "element-container_issue"], ["mat-icon-button", "", 3, "matMenuTriggerFor"], [3, "issue"], ["mat-icon-button", "", "matTooltip", "Close", 1, "secondary", 3, "click"], ["mat-menu-item", "", 3, "click"], ["mat-menu-item", "", "mat-error", "", 3, "click"], ["mat-icon-button", "", "matTooltip", "Reopen", 1, "secondary", 3, "click"]], template: function IssuesComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _IssuesComponent, selectors: [["app-issues"]], hostAttrs: [1, "app-layout"], decls: 18, vars: 4, consts: [["menu", "matMenu"], [1, "layout-head"], ["subscriptSizing", "dynamic", 1, "search"], ["matIconPrefix", "", 1, "search__prefix"], ["matInput", "", "placeholder", "Search", 3, "formControl"], ["matSuffix", "", "mat-icon-button", "", 1, "search__suffix"], ["mat-flat-button", "", 1, "mat-flat-button", 3, "click"], [1, "container"], [1, "heading"], [3, "change"], [3, "change", "sort"], [1, "content"], ["mode", "indeterminate", 1, "progress"], ["matSuffix", "", "mat-icon-button", "", 1, "search__suffix", 3, "click"], [1, "element-container", "element-container_issue"], ["mat-icon-button", "", 3, "matMenuTriggerFor"], [3, "issue"], ["mat-icon-button", "", 1, "secondary", 3, "click", "matTooltip"], ["mat-menu-item", "", 3, "click"], ["mat-menu-item", "", "mat-error", "", 3, "click"]], template: function IssuesComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "div", 1)(1, "mat-form-field", 2)(2, "mat-icon", 3);
       \u0275\u0275text(3, "search");
@@ -45079,9 +45107,9 @@ var IssuesComponent = class _IssuesComponent {
         return ctx.createIssue();
       });
       \u0275\u0275elementStart(7, "mat-icon");
-      \u0275\u0275text(8, "pest_control");
+      \u0275\u0275text(8, "add");
       \u0275\u0275elementEnd();
-      \u0275\u0275text(9, " New issue ");
+      \u0275\u0275text(9, " Add ");
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(10, "div", 7)(11, "div", 8)(12, "app-projects-selection", 9);
       \u0275\u0275listener("change", function IssuesComponent_Template_app_projects_selection_change_12_listener($event) {
@@ -45099,7 +45127,7 @@ var IssuesComponent = class _IssuesComponent {
       });
       \u0275\u0275elementEnd()();
       \u0275\u0275elementStart(15, "div", 11);
-      \u0275\u0275template(16, IssuesComponent_Conditional_16_Template, 13, 0, "div", 12)(17, IssuesComponent_Conditional_17_Template, 1, 0, "mat-progress-bar", 13);
+      \u0275\u0275template(16, IssuesComponent_Conditional_16_Template, 3, 0, "mat-action-list")(17, IssuesComponent_Conditional_17_Template, 1, 0, "mat-progress-bar", 12);
       \u0275\u0275elementEnd()();
     }
     if (rf & 2) {
@@ -46995,7 +47023,7 @@ function NavigationComponent_Conditional_41_Template(rf, ctx) {
     \u0275\u0275text(6, "folder");
     \u0275\u0275elementEnd()()();
     \u0275\u0275elementStart(7, "a", 20)(8, "span", 11)(9, "mat-icon");
-    \u0275\u0275text(10, "problem");
+    \u0275\u0275text(10, "grading");
     \u0275\u0275elementEnd()()();
     \u0275\u0275element(11, "mat-divider", 13);
     \u0275\u0275elementStart(12, "a", 14);
@@ -47017,13 +47045,13 @@ function NavigationComponent_Conditional_43_Template(rf, ctx) {
   if (rf & 1) {
     const _r6 = \u0275\u0275getCurrentView();
     \u0275\u0275elementStart(0, "nav", 16)(1, "a", 21)(2, "mat-icon");
-    \u0275\u0275text(3, "description");
+    \u0275\u0275text(3, "folder");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(4, "span");
     \u0275\u0275text(5, "Projects");
     \u0275\u0275elementEnd()();
     \u0275\u0275elementStart(6, "a", 22)(7, "mat-icon");
-    \u0275\u0275text(8, "bug_report");
+    \u0275\u0275text(8, "grading");
     \u0275\u0275elementEnd();
     \u0275\u0275elementStart(9, "span");
     \u0275\u0275text(10, "Issues");
@@ -47085,7 +47113,7 @@ var NavigationComponent = class _NavigationComponent {
       \u0275\u0275text(27, "Projects");
       \u0275\u0275elementEnd()()();
       \u0275\u0275elementStart(28, "a", 12)(29, "span", 11)(30, "mat-icon");
-      \u0275\u0275text(31, "problem");
+      \u0275\u0275text(31, "grading");
       \u0275\u0275elementEnd();
       \u0275\u0275elementStart(32, "span");
       \u0275\u0275text(33, "Issues");
@@ -47166,21 +47194,15 @@ var AuthComponent = class _AuthComponent {
   static \u0275fac = function AuthComponent_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _AuthComponent)();
   };
-  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AuthComponent, selectors: [["app-auth"]], decls: 7, vars: 0, consts: [[1, "brand"], [1, "material-symbols-outlined", "primary"]], template: function AuthComponent_Template(rf, ctx) {
+  static \u0275cmp = /* @__PURE__ */ \u0275\u0275defineComponent({ type: _AuthComponent, selectors: [["app-auth"]], decls: 5, vars: 0, consts: [[1, "brand"]], template: function AuthComponent_Template(rf, ctx) {
     if (rf & 1) {
       \u0275\u0275elementStart(0, "main")(1, "div", 0)(2, "span");
-      \u0275\u0275text(3, "Bug Hunter");
-      \u0275\u0275elementEnd();
-      \u0275\u0275elementStart(4, "mat-icon", 1);
-      \u0275\u0275text(5, " bug_report ");
+      \u0275\u0275text(3, "My-App");
       \u0275\u0275elementEnd()();
-      \u0275\u0275element(6, "router-outlet");
+      \u0275\u0275element(4, "router-outlet");
       \u0275\u0275elementEnd();
     }
-  }, dependencies: [
-    RouterOutlet,
-    MatIcon
-  ], styles: ["\n\n[_nghost-%COMP%] {\n  display: grid;\n  height: 100%;\n}\n[_nghost-%COMP%]   .brand[_ngcontent-%COMP%] {\n  font-size: var(--mat-sys-display-small-size);\n  font-weight: var(--mat-sys-display-small-weight);\n  letter-spacing: var(--mat-sys-display-small-tracking);\n  line-height: var(--mat-sys-display-small-line-height);\n  display: grid;\n  grid-template-columns: 1fr min-content;\n  padding-bottom: 24px;\n  place-items: center;\n  width: 300px;\n}\n[_nghost-%COMP%]   main[_ngcontent-%COMP%] {\n  place-self: center;\n}\n.material-symbols-outlined[_ngcontent-%COMP%] {\n  height: 40px;\n  width: 40px;\n  font-size: inherit;\n  align-items: center;\n  display: flex;\n}\n/*# sourceMappingURL=auth.component.css.map */"] });
+  }, dependencies: [RouterOutlet], styles: ['\n\n[_nghost-%COMP%] {\n  grid-template-rows: min-content 1fr;\n  grid-template-columns: 1fr;\n  grid-template-areas: "brand" "content";\n}\n[_nghost-%COMP%]   .brand[_ngcontent-%COMP%] {\n  font-size: var(--mat-sys-display-medium-size);\n  font-weight: var(--mat-sys-display-medium-weight);\n  letter-spacing: var(--mat-sys-display-medium-tracking);\n  line-height: var(--mat-sys-display-medium-line-height);\n  grid-area: brand;\n  display: grid;\n  place-items: center;\n  margin: 30px;\n  color: var(--mat-sys-primary);\n}\n[_nghost-%COMP%]   main[_ngcontent-%COMP%] {\n  grid-area: content;\n  place-self: center;\n}\n.material-symbols-outlined[_ngcontent-%COMP%] {\n  height: 40px;\n  width: 40px;\n  font-size: inherit;\n  align-items: center;\n  display: flex;\n}\n/*# sourceMappingURL=auth.component.css.map */'] });
 };
 (() => {
   (typeof ngDevMode === "undefined" || ngDevMode) && \u0275setClassDebugInfo(AuthComponent, { className: "AuthComponent", filePath: "src/app/layout/auth/auth.component.ts", lineNumber: 14 });

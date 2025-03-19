@@ -9,8 +9,8 @@
       }
   </mat-form-field>
   <button mat-flat-button class="mat-flat-button" (click)="createProject()">
-    <mat-icon>note_add</mat-icon>
-    New Project
+    <mat-icon>add</mat-icon>
+    Add
   </button>
 </div>
 
@@ -30,6 +30,10 @@
             <button mat-menu-item (click)="createIssue(project.id)">
               <mat-icon>pest_control</mat-icon>
               <span>Add issue</span>
+            </button>
+            <button mat-menu-item (click)="editProject(project)">
+              <mat-icon>edit_document</mat-icon>
+              <span>Edit</span>
             </button>
             <button mat-menu-item mat-error
               (click)="deleteProject(project.id)">
