@@ -289,10 +289,6 @@ html .mat-divider {
 html .mat-nav-list {
   display: flex;
   flex-direction: column;
-  height: 100%;
-}
-html .mat-nav-list a:last-child {
-  margin-top: auto;
 }
 html .nav-item {
   display: flex;

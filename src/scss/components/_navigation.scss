@@ -37,12 +37,9 @@
     .mat-nav-list {
         display: flex;
         flex-direction: column;
-        height: 100%;
     }
     
-    .mat-nav-list a:last-child {
-        margin-top: auto;
-    }
+    
 
     .nav-item {
         display: flex;
